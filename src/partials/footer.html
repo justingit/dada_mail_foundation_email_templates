@@ -1,38 +1,29 @@
 <spacer size="25"></spacer>
 
 <wrapper style="background-color:#cccccc">
-  <container style="background-color:#cccccc">
-    <row class="collapse" style="background-color:#cccccc">
-      <columns large="6">
-		  
-		  
-		  <h4>
-			  Contact
-		  </h4>
-		  <p>
-			  <strong>
-				  Email: 
-			  </strong>
-		  <a href="mailto:listowner@yourdomai.com">
-			  listowner@yourdomai.com
-		  </a>
-		  <p>
-			  <strong>
-				  Physical Address:</br>
-			  </strong>
-			  1234 Mockingbird Lane
-			  Boulder, Co
-			  80301
-      </columns>
-      <columns large="6">
-      	<h4>
-			Connect
-		</h4>
-		
-        <button class="small facebook expand" href="http://facebook.com">Facebook</button>
-        <button class="small twitter  expand" href="http://twitter.com">Twitter</button>
-        <button class="small google   expand" href="http://plus.google.com">Google+</button>
-      </columns>
-    </row>
-  </container>
+	<container style="background-color:#cccccc">
+		<row class="collapse" style="background-color:#cccccc">
+			<columns large="6">
+				<h4>
+					Contact
+				</h4>
+				<p>
+					<a href="mailto:{{vars.list_owner_email}}">
+						{{vars.list_owner_email}}
+					</a>
+				</p>
+				<p>
+					{{vars.physical_address}}
+				</p>
+			</columns>
+			<columns large="6">
+				<h4>
+					Connect
+				</h4>
+				<button class="small facebook expand" href="{{vars.facebook_url}}">Facebook</button>
+				<button class="small twitter  expand" href="{{vars.twitter_url}}">Twitter</button>
+				<button class="small google   expand" href="{{vars.google_plus_url}}">Google+</button>
+			</columns>
+		</row>
+	</container>
 </wrapper>
