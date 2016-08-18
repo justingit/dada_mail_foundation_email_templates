@@ -1,16 +1,20 @@
+---
+subject: Subject of Message
+---
+
 {{> banner}}
 
 <container>
 	<row>
 		<columns small="12" large="12">
 			<h1>
-				Ready to Join, {{ vars.list_name }}</h1>
+				Ready to Join, {{{ vars.list_name }}}?</h1>
 			</h1>
 			<container>
 				<row>
 					<columns>
 						<center>
-							<button href="{{vars.list_confirm_subscribe_link}}" class="large radius success">
+							<button href="{{{vars.list_confirm_subscribe_link}}}" class="large radius success">
 								Click Here to Confirm Your Subscription
 							</button>
 						</center>

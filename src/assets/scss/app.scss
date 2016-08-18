@@ -1,2 +1,50 @@
 @import 'settings';
 @import 'foundation-emails';
+
+
+
+// http://foundation.zurb.com/forum/posts/46910-best-way-to-inline-custom-styles
+table.button.facebook table td {
+  background: #3B5998 !important;
+  border-color: #3B5998;
+}
+
+table.button.twitter table td {
+  background: #1daced !important;
+  border-color: #1daced;
+} 
+
+table.button.google table td {
+  background: #DB4A39 !important;
+  border-color: #DB4A39;
+}
+
+.header {
+  background: #cccccc;
+}
+
+.header .columns {
+  padding-bottom: 0;
+}
+
+.header p {
+  color: #000000;
+  margin-bottom: 0;
+}
+
+.header .wrapper-inner {
+  padding: 20px; /*controls the height of the header*/
+}
+
+.header .container {
+  background: #cccccc;
+}
+
+.wrapper.secondary {
+  background: #cccccc;
+}
+
+.banner_img { 
+	border: 1px solid black
+}
+ 

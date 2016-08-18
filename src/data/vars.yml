@@ -2,7 +2,7 @@ banner_img_url: http://placehold.it/200x50
 subscriber_email: user@example.com
 list_owner_email: list_owner@example.com
 discussion_pop_email: discussion_pop_email@example.com
-list_confirm_subscribe_link: http://list_confirm_subscribe_link.example.com
+list_confirm_subscribe_link: <!-- tmpl_var list_confirm_subscribe_link -->
 list_unsubscribe_link: http://list_unsubscribe_link.example.com
 forward_to_a_friend_link: http://forward_to_a_friend_link.example.com
 list_name_url: http://list_name_url.example.com
@@ -10,7 +10,8 @@ profile_login_url: <!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var sub
 profile_email: user@example.com
 profile_password: profile_password
 date: today
-list_name: My Mailing List
+#list_name: My Mailing List
+list_name: <!-- tmpl_var list_settings.list_name -->
 list_info: Information about my mailing list
 list_privacy_policy: This is my privacy policy
 physical_address: 1234 Mockingbird Lane Boulder CO 80301
