@@ -1,22 +1,24 @@
-banner_img_url: http://placehold.it/200x50
-subscriber_email: user@example.com
-list_owner_email: list_owner@example.com
-discussion_pop_email: discussion_pop_email@example.com
+banner_img_url: <!-- tmpl_var list_settings.logo_image_url -->
+subscriber_email: <!-- tmpl_var subscriber.email -->
+list_owner_email: <!-- tmpl_var list_settings.list_owner_email -->
+discussion_pop_email: <!-- tmpl_var list_settings.discussion_pop_email -->
 list_confirm_subscribe_link: <!-- tmpl_var list_confirm_subscribe_link -->
-list_unsubscribe_link: http://list_unsubscribe_link.example.com
-forward_to_a_friend_link: http://forward_to_a_friend_link.example.com
-list_name_url: http://list_name_url.example.com
+list_unsubscribe_link: <!-- tmpl_var list_unsubscribe_link -->
+forward_to_a_friend_link: <!-- tmpl_var forward_to_a_friend_link -->
+list_name_url: <!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->
 profile_login_url: <!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/
-profile_email: user@example.com
-profile_password: profile_password
-date: today
-#list_name: My Mailing List
+profile_email: <!-- tmpl_var profile.email -->
+profile_password: <!-- tmpl_var profile.password -->
+date: <!-- tmpl_var date -_>
 list_name: <!-- tmpl_var list_settings.list_name -->
-list_info: Information about my mailing list
-list_privacy_policy: This is my privacy policy
-physical_address: 1234 Mockingbird Lane Boulder CO 80301
-facebook_url: http://facebook.com
-twitter_url: http://twitter.com
-google_plus_url: http://plus.google.com
+info: <!-- tmpl_var list_settings.info -->
+privacy_policy: <!-- tmpl_var list_settings.privacy_policy -->
+physical_address: <!-- tmpl_var list_settings.physical_address -->
+facebook_page_url: <!-- tmpl_var list_settings.facebook_page_url -->
+twitter_url: <!-- tmpl_var list_settings.twitter_url -->
+google_plus_url: <!-- tmpl_var list_settings.google_plus_url -->
+email_subject: <!-- tmpl_var email.subject -->
 
+preheader: <!-- tmpl_var email.preheader -->
 header_bg_color: '#cccccc'
+

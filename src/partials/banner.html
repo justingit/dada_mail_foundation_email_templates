@@ -2,11 +2,13 @@
 	<!-- <container> -->
 		<row class="collapse">
 			<columns small="6" valign="middle">
-				<img src="{{vars.banner_img_url}}" class="banner_img">
+				<a href="{{{vars.list_name_url}}}">
+					<img src="{{{vars.banner_img_url}}}" class="banner_img">
+				</a>
 			</columns>
 			<columns small="6" valign="middle">
 			<p class="text-right">
-				{{subject}}
+				{{{vars.email_subject}}}
 			</p>
 		</columns>
 		</row>

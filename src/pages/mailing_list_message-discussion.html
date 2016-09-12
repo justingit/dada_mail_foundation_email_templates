@@ -1,0 +1,43 @@
+---
+subject: <!-- tmpl_var list_settings.list_name --> Message
+---
+
+<!-- maybe wrapper has grey as the default bg? -->
+<container>
+	<row>
+		<columns small="12" large="12">	
+			{{> message_body}}
+		</columns>
+	</row>
+</container>
+
+<!--signature-->
+
+<container>
+	<row>
+		<columns small="12" large="12">			
+			<ul> 
+			<li>
+			<p>Post: 
+			    <a href="mailto:<!-- tmpl_var list_settings.discussion_pop_email -->">
+			 mailto:<!-- tmpl_var list_settings.discussion_pop_email -->
+			  </a>
+			</p>
+			</li>
+			<li>
+			<p>
+			 <a href="<!-- tmpl_var list_unsubscribe_link -->">
+			  Unsubscribe &#187;
+			 </a>
+			</p> 
+			</li>
+			<li>
+			<p>
+			 <a href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/">Manage Your Subscription &#187;</a>
+			</p>
+			</li>
+			</ul>
+		</columns>
+	</row>
+</container>
+<!--/signature-->

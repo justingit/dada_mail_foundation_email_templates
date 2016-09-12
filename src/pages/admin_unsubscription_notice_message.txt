@@ -1,0 +1,17 @@
+---
+to_phrase: <!-- tmpl_var list_settings.list_name -->
+from_phrase: <!-- tmpl_var list_settings.list_name -->
+subject: Unsubscribed <!-- tmpl_var subscriber.email -->
+---
+
+<!-- tmpl_var subscriber.email --> has been unsubscribed from:
+
+	<!-- tmpl_var list_settings.list_name -->
+
+Server Time: <!-- tmpl_var date -->
+IP Logged:   <!-- tmpl_var REMOTE_ADDR -->
+<!-- tmpl_var note -->
+
+There are now a total of: <!-- tmpl_var num_subscribers --> subscribers.
+
+-<!-- tmpl_var PROGRAM_NAME -->

@@ -1,5 +1,5 @@
 ---
-subject: Subject of Message
+subject: <!-- tmpl_var list_settings.list_name --> Mailing List Subscription Confirmation
 ---
 
 {{> banner}}
@@ -23,7 +23,7 @@ subject: Subject of Message
 			</container>
 			<callout class="primary">
 				<p>
-					{{vars.list_info}}
+					{{{vars.info}}}
 				</p>
 			</callout>
 			<callout class="warning">
@@ -43,7 +43,7 @@ subject: Subject of Message
 					<strong>
 						Privacy Policy for, Mailing List Name:
 					</strong>
-					{{vars.list_privacy_policy}}
+					{{{vars.privacy_policy}}}
 				</p>
 			</callout>
 		</columns>

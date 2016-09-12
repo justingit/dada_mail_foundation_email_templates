@@ -8,22 +8,31 @@
 					Contact
 				</h4>
 				<p>
-					<a href="mailto:{{vars.list_owner_email}}">
-						{{vars.list_owner_email}}
+					<a href="mailto:{{{vars.list_owner_email}}}">
+						{{{vars.list_owner_email}}}
 					</a>
 				</p>
 				<p>
-					{{vars.physical_address}}
+					{{{vars.physical_address}}}
 				</p>
 			</columns>
 			<columns large="6">
 				<h4>
 					Connect
-				</h4>
-				<button class="small facebook expand" href="{{vars.facebook_url}}">Facebook</button>
-				<button class="small twitter  expand" href="{{vars.twitter_url}}">Twitter</button>
-				<button class="small google   expand" href="{{vars.google_plus_url}}">Google+</button>
+				</h4> 
+				
+				<!-- tmpl_if list_settings.facebook_page_url -->
+					<button class="small facebook expand" href="{{{vars.facebook_page_url}}}">Facebook</button>
+				<!-- /tmpl_if -->
+				
+				<!-- tmpl_if list_settings.twitter_url -->
+					<button class="small twitter expand" href="{{{vars.twitter_url}}}">Twitter</button>
+				<!-- /tmpl_if -->
+				
+				<!-- tmpl_if list_settings.google_plus_url -->
+					<button class="small google expand" href="{{{vars.google_plus_url}}}">Google+</button>
+				<!-- /tmpl_if -->
 			</columns>
 		</row>
 	</container>
-</wrapper>
+</wrapper> 

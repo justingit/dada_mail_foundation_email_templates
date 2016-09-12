@@ -1,0 +1,36 @@
+---
+to_phrase: <!-- tmpl_var list_settings.list_name --> Subscriber
+from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+subject: Not Allowed to Post On <!-- tmpl_var list_settings.list_name -->
+---
+
+Hello, 
+
+You recently sent a message to, 
+
+	<!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.discussion_pop_email -->)
+	
+with the subject of, 
+
+    <!-- tmpl_var original_subject --> 
+    
+with the email address: 
+
+    <!-- tmpl_var subscriber.email -->
+
+But, it doesn't seem that you currently have permission to do so. 
+
+This may be because you have to first Subscribe to this Mailing List before
+sending messages to it.
+
+Please see: 
+
+	<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->
+
+for more information. 
+
+You may email the List Owner at: 
+
+	mailto:<!-- tmpl_var list_settings.list_owner_email -->
+
+	-- <!-- tmpl_var PROGRAM_NAME -->

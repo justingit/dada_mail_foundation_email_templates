@@ -1,0 +1,24 @@
+---
+to_phrase: <!-- tmpl_var list_settings.list_name -->
+from_phrase: <!-- tmpl_var list_settings.list_name -->
+subject: Subscribed <!-- tmpl_var subscriber.email -->
+---
+
+<!-- tmpl_var subscriber.email --> has subscribed to:
+
+	<!-- tmpl_var list_settings.list_name -->
+
+Server Time: <!-- tmpl_var date -->
+IP Logged:   <!-- tmpl_var REMOTE_ADDR -->
+<!-- tmpl_var note -->
+
+<!-- tmpl_if subscriber -->Extra Subscriber information: 
+-----------------------------
+<!-- tmpl_loop subscriber --> 
+<!-- tmpl_var name -->: <!-- tmpl_var value -->
+
+<!-- /tmpl_loop -->-----------------------------<!--/tmpl_if-->
+
+There are now a total of: <!-- tmpl_var num_subscribers --> subscribers.
+
+-<!-- tmpl_var PROGRAM_NAME -->

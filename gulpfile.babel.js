@@ -23,7 +23,7 @@ var CONFIG;
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build',
-  gulp.series(clean, pages, sass, images, inline));
+  gulp.series(clean, pages, plaintext, sass, images, inline));
 
 // Build emails, run the server, and watch for file changes
 gulp.task('default',
@@ -57,6 +57,13 @@ function pages() {
     .pipe(inky())
     .pipe(gulp.dest('dist'));
 }
+
+function plaintext() {
+  return gulp.src('src/pages/**/*.txt')
+    .pipe(gulp.dest('dist'));
+}
+
+
 
 // Reset Panini's cache of layouts and partials
 function resetPages(done) {
@@ -99,6 +106,7 @@ function server(done) {
 
 // Watch for file changes
 function watch() {
+  gulp.watch('src/pages/**/*.txt').on('change', gulp.series(plaintext));
   gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, inline, browser.reload));
   gulp.watch(['src/layouts/**/*', 'src/partials/**/*']).on('change', gulp.series(resetPages, pages, inline, browser.reload));
   gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('change', gulp.series(resetPages, sass, pages, inline, browser.reload));
