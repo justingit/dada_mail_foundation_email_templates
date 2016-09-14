@@ -1,0 +1,60 @@
+<wrapper> 
+	<container>
+		<row>
+			<columns small="12" large="12">
+				
+				<spacer size="25"></spacer>
+				
+				<!-- tmpl_if list_settings.show_archives --> 
+					<!-- tmpl_if list_settings.archive_send_form --> 
+
+						<p>
+							<strong>
+								<a href="{{{ vars.forward_to_a_friend_link }}}">
+									Forward this Message to a Friend &#187;
+								</a>
+							</strong>
+						</p>
+					<!-- /tmpl_if --> 
+				<!-- /tmpl_if --> 
+
+
+						<h4><small>
+							Subscription Reminder
+						</small></h4>
+					 
+						<p>You're Subscribed to:
+						<strong>
+							<a href="{{{vars.list_name_url}}}"> 
+								{{{ vars.list_name }}}
+							</a>
+						</strong> 
+						using the address: 
+						<strong>
+							{{{ vars.subscriber_email }}} 
+						</strong>
+					</p>
+							<container>
+								<row>
+									<columns small="12" large="5">
+									
+					
+						<!-- tmpl_if PROFILE_ENABLED --> 
+						<button href="{{{vars.profile_login_url}}}" class="tiny radius expanded">				
+							Manage Your Subscription
+						</button>
+						<!-- /tmpl_if --> 
+						</columns>
+						<columns small="12" large="2">
+						</columns>
+						<columns small="12" large="5">
+						<button href="{{{vars.list_unsubscribe_link}}}" class="tiny radius expanded">				
+							Unsubscribe Automatically
+						</button>
+									</columns>
+						</row>
+					</container>
+			</columns>
+		</row>
+	</container>
+</wrapper>

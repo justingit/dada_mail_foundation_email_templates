@@ -1,11 +1,12 @@
 <spacer size="25"></spacer>
 
-<wrapper style="background-color:#cccccc">
-	<container style="background-color:#cccccc">
-		<row class="collapse" style="background-color:#cccccc">
+<wrapper class="header" bgcolor="{{vars.header_bg_color}}">
+		<row class="collapse" style="background-color:aliceblue">
 			<columns large="6">
 				<h4>
-					Contact
+					<small>
+						Contact
+					</small>
 				</h4>
 				<p>
 					<a href="mailto:{{{vars.list_owner_email}}}">
@@ -18,7 +19,9 @@
 			</columns>
 			<columns large="6">
 				<h4>
-					Connect
+					<small>
+						Connect
+					</small>
 				</h4> 
 				
 				<!-- tmpl_if list_settings.facebook_page_url -->
@@ -34,5 +37,4 @@
 				<!-- /tmpl_if -->
 			</columns>
 		</row>
-	</container>
 </wrapper> 

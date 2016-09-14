@@ -7,6 +7,7 @@ subject: <!-- tmpl_var list_settings.list_name --> Message
 <container>
 	<row>
 		<columns small="12" large="12">
+			<spacer size="25"></spacer>
 			{{> message_body}}
 		</columns>
 	</row>
@@ -14,55 +15,5 @@ subject: <!-- tmpl_var list_settings.list_name --> Message
 
 <spacer size="25"></spacer>
 
-<wrapper> 
-	<container>
-		<row>
-			<columns small="12" large="12">
-				<!-- tmpl_if list_settings.show_archives --> 
-					<!-- tmpl_if list_settings.archive_send_form --> 
-
-						<p>
-							<strong>
-								<a href="{{{ vars.forward_to_a_friend_link }}}">
-									Forward this Message to a Friend &#187;
-								</a>
-							</strong>
-						</p>
-					<!-- /tmpl_if --> 
-				<!-- /tmpl_if --> 
-
-				<p>
-					<strong>
-						Subscription Reminder:
-					</strong> 
-					You're Subscribed to:
-					<strong>
-						<a href="{{{vars.list_name_url}}}"> 
-							{{{ vars.list_name }}}
-						</a>
-					</strong> 
-					using the address: 
-					<strong>
-						{{{ vars.subscriber_email }}} 
-					</strong>
-				</p>
-				<p>
-					<!-- tmpl_if PROFILE_ENABLED --> 
-						<strong>
-							<a href="{{{vars.profile_login_url}}}">Manage Your Subscription &#187;</a>
-						</strong>
-						or, 
-					<!-- /tmpl_if --> 
-
-					<strong>
-						<a href="{{{vars.list_unsubscribe_link}}}">
-							Unsubscribe Automatically &#187;
-						</a>
-					</strong>
-				</p> 
-			</columns>
-		</row>
-	</container>
-</wrapper>
-
+{{> subscription_reminder}}
 {{> footer}}
