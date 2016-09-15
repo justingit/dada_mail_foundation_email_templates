@@ -8,7 +8,15 @@
 			</columns>
 			<columns small="6" valign="middle">
 			<p class="text-right">
-				{{{vars.email_subject}}}
+				<!-- tmpl_if email.preheader -->
+					<!-- tmpl_var email.preheader -->
+				<!-- tmpl_else -->
+					<!-- tmpl_if email.subject -->
+						<!-- tmpl_var email.subject -->
+					<!-- tmpl_else -->
+						<!-- tmpl_var list_settings.list_name -->
+					<!-- /tmpl_if -->
+				<!-- /tmpl_if --> 
 			</p>
 		</columns>
 		</row>
