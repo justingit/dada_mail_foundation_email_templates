@@ -20,5 +20,5 @@ google_plus_url: <!-- tmpl_var list_settings.google_plus_url -->
 email_subject: <!-- tmpl_var email.subject -->
 
 preheader: <!-- tmpl_var email.preheader -->
-header_bg_color: '#cccccc'
+header_bg_color: '#e9ebee'
 

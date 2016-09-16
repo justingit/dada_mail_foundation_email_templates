@@ -5,6 +5,8 @@ preheader: Click the subscribe button to confirm your subscription
 subject: <!-- tmpl_var list_settings.list_name --> Mailing List Subscription Confirmation
 ---
 
+<!-- tmpl_var email.preheader -->
+
 Hello! 
 
 This message has been sent to you as the final step to confirm your
