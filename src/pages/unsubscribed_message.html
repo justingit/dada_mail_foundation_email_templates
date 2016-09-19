@@ -2,16 +2,17 @@
 <container>
 	<row>
 		<columns small="12" large="12">
+			<h1>Farewell!</h1>
 			<callout class="success">
 				<p>
-					You have removed been from, {{vars.list_name}}.
+					You have removed been from <!-- tmpl_var list_settings.list_name -->.
 				</p>
 			</callout>
 			<ul>
 				<li>
 					<strong>
 						Date of Removal:
-					</strong> {{vars.date}}
+					</strong> <!-- tmpl_var date -->
 				</li>
 			</ul>
 			<p>
@@ -21,8 +22,8 @@
 				<row>
 					<columns>
 						<center>
-							<button href="{{vars.list_name_url}}" class="large radius success expand">
-								Click Here to Revisit, {{vars.list_name}}
+							<button href="{{{ vars.list_name_url }}}" class="large radius success expand">
+								Revisit <!-- tmpl_var list_settings.list_name -->
 							</button>
 						</center>
 					</columns>

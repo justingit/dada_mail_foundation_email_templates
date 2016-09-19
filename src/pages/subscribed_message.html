@@ -1,20 +1,16 @@
----
-default_subject: Subject of Message
----
-
 {{> banner}}
 
 <container>
 	<row>
 		<columns small="12" large="12">
 			<h1>
-				Subscribed to, {{vars.list_name}}
+				Congratulations!
 			</h1>
-			<callout class="success">
+			
 				<p>
-					Congratulations! You are now a member of, {{vars.list_name}}.
+					You are now a member of <!-- tmpl_var list_settings.list_name -->.
 				</p>
-			</callout>
+			<callout class="success">
 			<ul>
 				<!-- tmpl_if list_settings.group_list --> 
 					<li>
@@ -25,8 +21,8 @@ default_subject: Subject of Message
 							(unmoderated)
 						<!-- /tmpl_if -->
 						. You may start a new thread, by sending an email message to, 
-						<a href="mailto:{{vars.discussion_pop_email}}">
-							{{vars.discussion_pop_email}}
+						<a href="mailto:<!-- tmpl_var list_settings.discussion_pop_email -->">
+							<!-- tmpl_var list_settings.discussion_pop_email -->
 						</a>
 					</li>
 				<!-- tmpl_else --> 
@@ -38,13 +34,13 @@ default_subject: Subject of Message
 			<!-- tmpl_if PROFILE_ENABLED -->
 				<!-- tmpl_if new_profile --> 
 					<h3>
-						Profile for, {{subscriber_email}}
+						Profile for <!-- tmpl_var subscriber.email -->
 					</h3>
 					<container>
 						<row>
 							<columns>
 								<center>
-									<button href="{{vars.profile_login_url}}" class="large radius success expand">
+									<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="large radius success expand">
 										Click Here to Visit your Profile
 									</button>
 								</center>
@@ -53,13 +49,13 @@ default_subject: Subject of Message
 									<strong>
 										Username: 
 									</strong>
-									{{profile_email}}
+									<!-- tmpl_var profile.email -->
 								</li>
 								<li>
 									<strong>
-										Password:
+										Password: 
 									</strong>
-									{{vars.profile_password}}
+									<!-- tmpl_var profile.password -->
 								</li>
 							</ul>
 						</columns>
@@ -67,32 +63,33 @@ default_subject: Subject of Message
 				</container>
 			<!-- /tmpl_if -->
 		<!-- /tmpl_if --> 
+		</callout>
 		<callout class="warning">
 			<p>
 				<strong>
-					Privacy Policy for, {{vars.list_name}}:
+					Privacy Policy for <!-- tmpl_var list_settings.list_name -->: 
 				</strong>
-				{{vars.privacy_policy}}
+				<!-- tmpl_var list_settings.privacy_policy -->
 			</p>
 		</callout>
 		<ul>
 			<li>
 				<strong>
-					Date of this subscription:
+					Date of this subscription: 
 				</strong>
-				{{vars.date}}
+				<!-- tmpl_var date -->
 			</li>
 			<li>
 				<strong>
-					Need Help? Contact: 
+					Need Help? Contact:  
 				</strong>
-				<a href="mailto:{{vars.list_owner_email}}">
-					{{vars.list_owner_email}}
+				<a href="mailto:<!-- tmpl_var list_settings.list_owner_email -->">
+					<!-- tmpl_var list_settings.list_owner_email -->
 				</a>
 				</li>
 				<li>
 					<strong>
-						<a href="{{vars.list_unsubscribe_link}} ">
+						<a href="<!-- tmpl_var list_unsubscribe_link -->">
 							Remove yourself
 						</a>
 					</strong>

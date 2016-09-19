@@ -1,3 +1,4 @@
+foo: <!-- comment -->
 banner_img_url: <!-- tmpl_var list_settings.logo_image_url -->
 subscriber_email: <!-- tmpl_var subscriber.email -->
 list_owner_email: <!-- tmpl_var list_settings.list_owner_email -->
@@ -9,7 +10,7 @@ list_name_url: <!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.li
 profile_login_url: <!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/
 profile_email: <!-- tmpl_var profile.email -->
 profile_password: <!-- tmpl_var profile.password -->
-date: <!-- tmpl_var date -_>
+date: <!-- tmpl_var date -->
 list_name: <!-- tmpl_var list_settings.list_name -->
 info: <!-- tmpl_var list_settings.info -->
 privacy_policy: <!-- tmpl_var list_settings.privacy_policy -->

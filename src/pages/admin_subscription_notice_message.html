@@ -1,0 +1,43 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				You've gained a new subscriber!
+			</h1>
+			
+
+			<h4>
+				<!-- tmpl_var subscriber.email --> has subscribed to: 
+				<strong>
+					<!-- tmpl_var list_settings.list_name -->
+				</strong>
+			</h4>
+
+			<p>
+				There are now a total of <!-- tmpl_var num_subscribers --> subscriber(s).
+			
+
+			<ul>
+				<li>Server Time: <!-- tmpl_var date --></li>
+				<li>IP Logged:   <!-- tmpl_var REMOTE_ADDR --></li>
+			</ul>
+				<!-- tmpl_if subscriber -->
+
+				<h4>
+					Extra Subscriber information
+				</h4>
+				<ul>
+					<!-- tmpl_loop subscriber --> 
+						<li>
+							<!-- tmpl_var name -->: <!-- tmpl_var value -->
+						</li>
+					<!-- /tmpl_loop -->
+				</ul>
+			<!--/tmpl_if-->
+
+	</row>
+</container>
+
+{{> footer}}

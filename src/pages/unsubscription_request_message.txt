@@ -1,9 +1,3 @@
----
-to_phrase: <!-- tmpl_var list_settings.list_name --> Subscriber
-from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
-subject: Unsubscribe from: <!-- tmpl_var list_settings.list_name -->
----
-
 Hello, 
 
 Please use this link:
@@ -14,7 +8,7 @@ to remove:
 
 	<!-- tmpl_var subscriber.email -->
 
- from the following mailing list: 
+ from the following list: 
 
 	<!-- tmpl_var list_settings.list_name -->
 
@@ -27,4 +21,4 @@ The following physical address is associated with this mailing list:
 <!-- tmpl_var list_settings.physical_address -->
 
 
-- mailto:<!-- tmpl_var list_settings.list_owner_email --> 
+- mailto:<!-- tmpl_var list_settings.list_owner_email -->

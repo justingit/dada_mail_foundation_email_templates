@@ -1,3 +1,7 @@
+---
+subject: <!-- tmpl_var list_settings.list_name --> Message
+---
+
 <!-- tmpl_var message_body --> 
 
 -- 
