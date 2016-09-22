@@ -1,0 +1,46 @@
+{{> banner}}
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1><!-- tmpl_var message_subject --> - All Sent!</h1>
+
+			<p>
+				This mass mailing has reached: <!-- tmpl_var addresses_sent_to --> e-mail address(es)
+			</p>
+			<ul>
+				<li><strong>Mailing Started:</strong>    <!-- tmpl_var mailing_start_time --></li>
+				<li><strong>Mailing Ended:</strong>      <!-- tmpl_var mailing_finish_time --></li>
+				<li><strong>Total Mailing Time:</strong> <!-- tmpl_var total_mailing_time --></li>
+				<li><strong>Last Email Sent to:</strong> <!-- tmpl_var last_email_send_to --></li>
+			</ul>
+	
+			<p>
+				Here are some stats about who's been opening, reading, and interacting with your message, 
+				from when you started sending, to when sending finished:
+			</p>
+
+			<ul>
+				<li><strong>Unique Opens:</strong>    <!-- tmpl_var unique_open --> (<!-- tmpl_var unique_opens_percent -->%)</li>
+				<li><strong>Clickthroughs:</strong>   <!-- tmpl_var clickthroughs --></li>
+				<li><strong>Unsubscriptions:</strong> <!-- tmpl_var unsubscribe --> (<!-- tmpl_var unique_unsubscribes_percent -->%)</li>
+				<!-- tmpl_if errors_sending_to -->
+					<li>
+						<p style="color:red">
+							<strong>Sending Errors:</strong> <!-- tmpl_var unsubscribe --> (<!-- tmpl_var unique_unsubscribes_percent -->%)
+						</p>
+					</li>
+				<!-- /tmpl_if -->
+			
+			</ul>
+	
+			<p>
+				See the up-to-date stats for this message in the Tracker plugin.
+			</p>
+
+			<h1>
+				Keep up the good work! 
+			</h1>
+		</columns>
+	</row>
+</container>
+{{> footer}}

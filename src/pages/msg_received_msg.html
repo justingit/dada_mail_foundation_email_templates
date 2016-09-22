@@ -1,0 +1,24 @@
+{{> banner}}
+	<container>
+		<row>
+			<columns small="12" large="12">
+				<h1>
+					Thanks, 
+					<!-- tmpl_var subscriber.email --> 
+					<small>Message Received</small>
+				</h1>
+				<p>
+					<strong>Subject:</strong> 
+						<!-- tmpl_var original_subject -->
+					will start being sent to 
+					<strong>
+						<!-- tmpl_var list_settings.list_name -->
+					</strong>
+					<em>
+						ASAP!
+					</em>
+				</p>
+			</columns>
+		</row>
+	</container>
+{{> footer}}

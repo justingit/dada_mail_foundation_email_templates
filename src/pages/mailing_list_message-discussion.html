@@ -1,43 +1,59 @@
+<!--opening-->
 <wrapper>
-
 <container>
 	<row>
 		<columns small="12" large="12">	
+			<spacer size="25"></spacer>
+<!--/opening-->
+
 			{{> message_body}}
+
+<!--signature-->
 		</columns>
 	</row>
 </container>
 
-<!--signature-->
+
 
 <container>
 	<row>
-		<columns small="12" large="12">			
-			<ul> 
-			<li>
-			<p>Post: 
-			    <a href="mailto:<!-- tmpl_var list_settings.discussion_pop_email -->">
-			 mailto:<!-- tmpl_var list_settings.discussion_pop_email -->
-			  </a>
-			</p>
-			</li>
-			<li>
-			<p>
-			 <a href="<!-- tmpl_var list_unsubscribe_link -->">
-			  Unsubscribe &#187;
-			 </a>
-			</p> 
-			</li>
-			<li>
-			<p>
-			 <a href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/">Manage Your Subscription &#187;</a>
-			</p>
-			</li>
-			</ul>
+		<columns small="12" large="12">		
+			
+			<spacer size="25"></spacer>
+			<h4>
+				<small>
+					<!-- tmpl_var list_settings.list_name -->
+				</small>
+			</h4>	
+			
+			<container>
+				<row>
+					<columns small="12" large="12">
+						<button href="mailto:<!-- tmpl_var list_settings.discussion_pop_email -->" class="small radius expand success">				
+							Post to: <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.discussion_pop_email -->)
+						</button>
+					</columns>	
+				</row>
+				<row>
+					<columns small="12" large="5">
+						<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="small radius expand">				
+							Manage Your Subscription
+						</button>
+					</columns>
+					<columns small="12" large="2">
+					</columns>
+					<columns small="12" large="5">
+						<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
+							Unsubscribe
+						</button>
+					</columns>
+				</row>
+			</container>
+			
 		</columns>
 	</row>
 </container>
 
-<!--/signature-->
 
 </wrapper>
+<!--/signature-->
