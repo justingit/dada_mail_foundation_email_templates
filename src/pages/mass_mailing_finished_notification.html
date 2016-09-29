@@ -2,7 +2,7 @@
 <container>
 	<row>
 		<columns small="12" large="12">
-			<h1><!-- tmpl_var message_subject --> - All Sent!</h1>
+			<h1><!-- tmpl_var message_subject -->: Sent!</h1>
 
 			<p>
 				This mass mailing has reached: <!-- tmpl_var addresses_sent_to --> e-mail address(es)
@@ -15,8 +15,8 @@
 			</ul>
 	
 			<p>
-				Here are some stats about who's been opening, reading, and interacting with your message, 
-				from when you started sending, to when sending finished:
+				Stats on who's been opening, reading, and interacting with your message
+				are being compiled: 
 			</p>
 
 			<ul>
@@ -26,7 +26,7 @@
 				<!-- tmpl_if errors_sending_to -->
 					<li>
 						<p style="color:red">
-							<strong>Sending Errors:</strong> <!-- tmpl_var unsubscribe --> (<!-- tmpl_var unique_unsubscribes_percent -->%)
+							<strong>Sending Errors:</strong> <!-- tmpl_var errors_sending_to --> (<!-- tmpl_var errors_sending_to_percent -->%)
 						</p>
 					</li>
 				<!-- /tmpl_if -->
@@ -34,12 +34,14 @@
 			</ul>
 	
 			<p>
-				See the up-to-date stats for this message in the Tracker plugin.
+				See the up-to-date stats for this message in the Tracker plugin - these stats are only 
+				from when the mass mailing started, to when it finished. 
+				People will still be checking their email afterwards.
 			</p>
 
-			<h1>
+			<h2>
 				Keep up the good work! 
-			</h1>
+			</h2>
 		</columns>
 	</row>
 </container>

@@ -4,21 +4,20 @@
 	<row>
 		<columns small="12" large="12">
 			<h1>
-				Unsubscribed <!-- tmpl_var subscriber.email -->
+				Unsubscribed <small><!-- tmpl_var subscriber.email --></small>
 			</h1>
 			
 
-			<h4>
+			<p>
 				<!-- tmpl_var subscriber.email --> has been unsubscribed from: 
 				<strong>
 					<!-- tmpl_var list_settings.list_name -->
 				</strong>
-			</h4>
+			</p>
 
 			<p>
 				There are now a total of <!-- tmpl_var num_subscribers --> subscriber(s).
 			
-
 			<ul>
 				<li>Server Time: <!-- tmpl_var date --></li>
 				<li>IP Logged:   <!-- tmpl_var REMOTE_ADDR --></li>

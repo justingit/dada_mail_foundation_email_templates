@@ -1,14 +1,11 @@
-<!--opening-->
 <wrapper>
 <container>
 	<row>
 		<columns small="12" large="12">	
 			<spacer size="25"></spacer>
-<!--/opening-->
-
+			
 			{{> message_body}}
 
-<!--signature-->
 		</columns>
 	</row>
 </container>
@@ -36,16 +33,26 @@
 				</row>
 				<row>
 					<columns small="12" large="5">
-						<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="small radius expand">				
-							Manage Your Subscription
-						</button>
+						<!-- tmpl_if PROFILE_ENABLED --> 
+							<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="small radius expand">				
+								Manage Your Subscription
+							</button>
+				<!-- /tmpl_if -->
 					</columns>
 					<columns small="12" large="2">
 					</columns>
 					<columns small="12" large="5">
+						
+						
 						<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
-							Unsubscribe
+							<!-- tmpl_if list_settings.private_list -->
+								Request Removal
+							<!-- tmpl_else -->
+								Unsubscribe
+							<!-- /tmpl_if -->
 						</button>
+						
+						
 					</columns>
 				</row>
 			</container>
@@ -54,6 +61,4 @@
 	</row>
 </container>
 
-
 </wrapper>
-<!--/signature-->

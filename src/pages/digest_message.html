@@ -1,0 +1,42 @@
+<container>
+	<row>
+		<columns small="12" large="12">	
+			<spacer size="25"></spacer>
+			
+			
+
+<h1>Begin Digest:</h1>
+<p>Number of messages: <!-- tmpl_var num_messages --></p>
+
+<ul>
+<!-- tmpl_loop digest_messages -->
+<li>
+    <a href="#digest_<!-- tmpl_var archive_id -->">
+        <!-- tmpl_var subject -->
+    </a>
+    by, 
+    <!-- tmpl_var subscriber.email --> 
+    (<!-- tmpl_var date -->)
+<!-- /tmpl_loop -->
+</li>
+<!-- tmpl_loop digest_messages -->
+</ul>
+
+<p>
+<a name="digest_<!-- tmpl_var archive_id -->"></a>
+<strong>Date:</strong> <!-- tmpl_var date --><br >
+<strong>From:</strong> <!-- tmpl_var subscriber.email --><br >
+<strong>Subject:</strong> <!-- tmpl_var subject --></p>
+<p>
+<!-- tmpl_var html_message -->
+</p>
+<hr >
+
+<!-- /tmpl_loop -->
+
+<h1>End Digest.</h1>
+
+
+		</columns>
+	</row>
+</container>
