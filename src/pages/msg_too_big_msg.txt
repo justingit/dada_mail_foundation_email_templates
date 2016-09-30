@@ -1,5 +1,5 @@
 ---
-subject: Message to: <!-- tmpl_var list_settings.list_name -->  Subject: <!-- tmpl_var original_subject --> rejected
+subject: Message to: <!-- tmpl_var list_settings.list_name -->, <!-- tmpl_var original_subject --> rejected
 ---
 
 Hello, <!-- tmpl_var subscriber.email -->, 

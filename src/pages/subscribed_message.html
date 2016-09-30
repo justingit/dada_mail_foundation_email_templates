@@ -5,11 +5,11 @@
 		<columns small="12" large="12">
 			<h1>
 				Congratulations!
-				<small> <!-- tmpl_var profile.email --></small>
+				
 			</h1>
 			
 			<p>
-				You are now a member of <!-- tmpl_var list_settings.list_name -->.
+				<!-- tmpl_var profile.email -->, you are now a member of <!-- tmpl_var list_settings.list_name -->.
 			</p>
 				
 			<callout class="success">
@@ -42,7 +42,7 @@
 				<!-- tmpl_if PROFILE_ENABLED -->
 					<!-- tmpl_if new_profile --> 
 						<h3>
-							Profile for <!-- tmpl_var subscriber.email -->
+							Profile
 						</h3>
 
 						<center>

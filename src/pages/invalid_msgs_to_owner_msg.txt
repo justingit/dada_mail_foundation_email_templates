@@ -2,7 +2,7 @@
 subject: <!-- tmpl_var PROGRAM_NAME --> Error - <!-- tmpl_var subscriber.email --> Not Allowed to Post On <!-- tmpl_var list_settings.list_name -->
 ---
 
-A message was set to, 
+A message was sent to, 
 
 <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.discussion_pop_email -->)
 
@@ -14,6 +14,6 @@ from,
 
 <!-- tmpl_var subscriber.email -->
 	
-because it was not sent from an address that has permission to do so. 
+but was not sent out to your mailing list, because it was not sent from an address that has permission to do so. 
 
 -- <!-- tmpl_var PROGRAM_NAME -->
