@@ -1,5 +1,5 @@
 ---
-subject: Message to: <!-- tmpl_var list_settings.list_name --> w/ Subject: <!-- tmpl_var message_subject --> has been accepted.
+subject: Message to <!-- tmpl_var list_settings.list_name --> w/ Subject <!-- tmpl_var message_subject --> has been accepted
 ---
 
 Hello, 
