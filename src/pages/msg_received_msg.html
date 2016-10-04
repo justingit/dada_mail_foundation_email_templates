@@ -3,14 +3,14 @@
 		<row>
 			<columns small="12" large="12">
 				<h1>
-					Thanks, 
-					<!-- tmpl_var subscriber.email --> 
-					<small>Message Received</small>
+					Message Received
 				</h1>
 				<p>
-					<strong>Subject:</strong> 
-						<!-- tmpl_var original_subject -->
-					will start being sent to 
+					Thanks, <!-- tmpl_var subscriber.email -->. 
+					Your message with the subject, 
+					<strong>
+						<!-- tmpl_var original_subject escape="HTML" --></strong> 
+					will be delivered to, 
 					<strong>
 						<!-- tmpl_var list_settings.list_name -->
 					</strong>

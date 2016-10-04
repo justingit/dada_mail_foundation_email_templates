@@ -1,17 +1,41 @@
-<pre>
-The attached message needs to be moderated:
+{{> banner}}
 
-    List:    <!-- tmpl_var list_settings.list_name -->
-    From:    <!-- tmpl_var subscriber.email -->
-    Subject: <!-- tmpl_var message_subject -->
+<container>
+	<row>
+		<columns small="12" large="12">
 
-To send this message to the list, click here: 
 
-    <!-- tmpl_var moderation_confirmation_link -->
-    
-To deny sending this message to the list, click here: 
+			<h1>Moderation Needed</h1>
 
-    <!-- tmpl_var moderation_deny_link -->
+			<p>
+				<em>
+					Message is attached
+				</em>
+			</p>
 
--- <!-- tmpl_var Plugin_Name --> 
-</pre>
+				<ul>
+				    <li><strong>List:</strong>    <!-- tmpl_var list_settings.list_name --></li>
+				    <li><strong>From:</strong>    <!-- tmpl_var subscriber.email --></li>
+				    <li><strong>Subject:</strong> <!-- tmpl_var message_subject --></li>
+				</ul>
+			<container>
+				<row>
+					<columns small="12" large="5">
+						<button href=" <!-- tmpl_var moderation_confirmation_link -->" class="radius expanded success">				
+							Approve
+						</button>
+						</columns>
+						<columns small="12" large="2">
+						</columns>
+						<columns small="12" large="5">
+						<button href="<!-- tmpl_var moderation_deny_link -->" class="radius expanded warning">				
+							Deny
+						</button>
+					</columns>
+				</row>
+			</container>
+		</columns>
+	</row>
+</container>
+		
+{{> footer}}	

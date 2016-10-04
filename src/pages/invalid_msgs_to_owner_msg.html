@@ -1,0 +1,19 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<ul>
+				<li><strong>List:</strong>    <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.discussion_pop_email -->)</li>
+				<li><strong>From:</strong>    <!-- tmpl_var subscriber.email --></li>
+				<li><strong>Subject:</strong> <!-- tmpl_var original_subject --></li>
+			</ul>
+
+			<p>A message was received, but was not sent out to your mailing list, most likely 
+because <!-- tmpl_var subscriber.email --> is not currently a subscriber. </p> 
+
+		</columns>
+	</row>
+</container>
+
+{{> footer}}

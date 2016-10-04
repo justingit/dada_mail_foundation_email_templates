@@ -1,0 +1,30 @@
+{{> banner}}
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				Sorry, Not Allowed to Post
+			</h1>
+			
+			<ul>
+				<li><strong>List:</strong>    <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.discussion_pop_email -->)</li>
+				<li><strong>From:</strong>    <!-- tmpl_var subscriber.email --></li>
+				<li><strong>Subject:</strong> <!-- tmpl_var original_subject --></li>
+			</ul>
+			
+			<p>
+				Your message was received, but was not sent out to this mailing list, most likely 
+				because you are not currently a subscriber.
+			</p>
+
+			<p>Please see <a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->">
+				<!-- tmpl_var list_settings.list_name -->'s main screen
+			</a> for more information.</p>
+
+			<p>You may email the List Owner at: <!-- tmpl_var list_settings.list_owner_email --></p>
+
+		</columns>
+	</row>
+</container>
+
+{{> footer}}

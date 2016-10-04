@@ -4,8 +4,6 @@ from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
 subject: "Unsubscribed from: <!-- tmpl_var list_settings.list_name --> because of excessive bouncing"
 ---
 
-Hello, This is <!-- tmpl_var Plugin_Name -->, the bounce handler for <!-- tmpl_var PROGRAM_NAME -->
-
 This is a notice that your email address:
 
     <!-- tmpl_var subscriber.email -->

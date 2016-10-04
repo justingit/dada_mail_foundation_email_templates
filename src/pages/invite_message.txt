@@ -1,6 +1,6 @@
 ---
 to_phrase: <!-- tmpl_var list_settings.list_name -->
-from_phrase: <!-- tmpl_var list_settings.list_name -->
+from_phrase: <!-- tmpl_var list_settings.list_name --> List Owner
 subject: You've been Invited to Subscribe to, "<!-- tmpl_var list_settings.list_name -->"
 ---
 

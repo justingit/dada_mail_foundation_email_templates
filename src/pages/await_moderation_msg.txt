@@ -2,12 +2,14 @@
 subject: Message to <!-- tmpl_var list_settings.list_name --> w/ Subject <!-- tmpl_var message_subject --> is awaiting approval.
 ---
 
-Hello, 
+Awaiting Approval
 
-Your recent message to <!-- tmpl_var list_settings.list_name --> with the subject of: 
+Thanks for contributing! Your recent message to 
 
-    <!-- tmpl_var message_subject --> 
-  
-is awaiting approval. 
+	<!-- tmpl_var list_settings.list_name -->
 
--- <!-- tmpl_var Plugin_Name -->
+with the subject of
+
+	<!-- tmpl_var message_subject --> 
+
+is being moderating and is awaiting approval.

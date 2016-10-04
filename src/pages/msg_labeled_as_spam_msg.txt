@@ -1,5 +1,5 @@
 ---
-subject: Message to: <!-- tmpl_var list_settings.list_name -->  Subject: <!-- tmpl_var original_subject --> Labeled as Spam
+subject: Message to, <!-- tmpl_var list_settings.list_name -->  Subject, <!-- tmpl_var original_subject --> Labeled as Spam
 ---
 
 Hello, <!-- tmpl_var subscriber.email -->, 

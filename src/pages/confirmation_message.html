@@ -14,7 +14,7 @@ subject: <!-- tmpl_var list_settings.list_name --> Mailing List Subscription Con
 				<row>
 					<columns>
 						<center>
-							<button href="{{{vars.list_confirm_subscribe_link}}}" class="large radius success">
+							<button href="<!-- tmpl_var list_confirm_subscribe_link -->" class="large radius success">
 								Click Here to Confirm Your Subscription
 							</button>
 						</center>
@@ -23,7 +23,7 @@ subject: <!-- tmpl_var list_settings.list_name --> Mailing List Subscription Con
 			</container>
 			<callout class="primary">
 				<p>
-					{{{vars.info}}}
+					<!-- tmpl_var list_settings.info -->
 				</p>
 			</callout>
 			<callout class="warning">
@@ -41,9 +41,9 @@ subject: <!-- tmpl_var list_settings.list_name --> Mailing List Subscription Con
 				</p>
 				<p>
 					<strong>
-						Privacy Policy for, Mailing List Name:
+						Privacy Policy for, <!-- tmpl_var list_settings.list_name -->:
 					</strong>
-					{{{vars.privacy_policy}}}
+					<!-- tmpl_var list_settings.privacy_policy -->
 				</p>
 			</callout>
 		</columns>
