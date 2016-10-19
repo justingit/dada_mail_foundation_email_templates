@@ -43,7 +43,7 @@
 									
 					
 								<!-- tmpl_if PROFILE_ENABLED --> 
-									<button href="{{{vars.profile_login_url}}}" class="tiny radius expanded">				
+									<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="tiny radius expanded">				
 										Manage Your Subscription
 									</button>
 								<!-- /tmpl_if --> 

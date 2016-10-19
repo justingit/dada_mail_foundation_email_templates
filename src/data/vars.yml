@@ -1,25 +1,2 @@
-foo: <!-- comment -->
-banner_img_url: <!-- tmpl_var list_settings.logo_image_url -->
-subscriber_email: <!-- tmpl_var subscriber.email -->
-list_owner_email: <!-- tmpl_var list_settings.list_owner_email -->
-discussion_pop_email: <!-- tmpl_var list_settings.discussion_pop_email -->
-list_confirm_subscribe_link: <!-- tmpl_var list_confirm_subscribe_link -->
-list_unsubscribe_link: <!-- tmpl_var list_unsubscribe_link -->
-forward_to_a_friend_link: <!-- tmpl_var forward_to_a_friend_link -->
-list_name_url: <!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->
-profile_login_url: <!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/
-profile_email: <!-- tmpl_var profile.email -->
-profile_password: <!-- tmpl_var profile.password -->
-date: <!-- tmpl_var date -->
-list_name: <!-- tmpl_var list_settings.list_name -->
-info: <!-- tmpl_var list_settings.info -->
-privacy_policy: <!-- tmpl_var list_settings.privacy_policy -->
-physical_address: <!-- tmpl_var list_settings.physical_address -->
-facebook_page_url: <!-- tmpl_var list_settings.facebook_page_url -->
-twitter_url: <!-- tmpl_var list_settings.twitter_url -->
-google_plus_url: <!-- tmpl_var list_settings.google_plus_url -->
-email_subject: <!-- tmpl_var email.subject -->
-
+banner_bg_color: '#e9ebee'
 preheader: <!-- tmpl_var email.preheader -->
-header_bg_color: '#e9ebee'
-

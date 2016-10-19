@@ -1,0 +1,35 @@
+{{> banner}}
+
+	<container>
+		<row>
+			<columns small="12" large="12">
+
+
+				<h1>Sending Test</h1>
+
+				<p>
+					This message was sent out by <!-- tmpl_var PROGRAM_NAME --> to test out mail sending for the mailing list, 
+					<strong>
+						<!-- tmpl_var list_settings.list_name --> 
+					</strong>
+				</p>
+				<p>
+					If you've received this message, mail sending is working!
+				</p>
+
+				<ul>
+				<!-- tmpl_if expr="(list_settings.sending_method eq 'sendmail')" --> 
+					<li>Mail is being sent via the sendmail command</li>
+				<!--/tmpl_if -->
+				<!-- tmpl_if expr="(list_settings.sending_method eq 'smtp')" --> 
+					<li>Mail is being sent via SMTP</li>
+				<!--/tmpl_if --> 
+				<!-- tmpl_if expr="(list_settings.sending_method eq 'amazon_ses')" --> 
+					<li>Mail is being sent via Amazon Simple Email Service</li>
+				<!--/tmpl_if -->
+				</ul>
+			</columns>
+		</row>
+	</container>
+
+{{> footer}}
