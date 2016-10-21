@@ -1,11 +1,8 @@
 ---
 to_phase: <!-- tmpl_var list_settings.list_name --> Owner
 from_phrase: <!-- tmpl_var list_settings.list_name --> Subscriber
-subject: Abuse Reported on <!-- tmpl_var list_settings.list_name --> (<!--tmpl_var list_settings.list -->): <!-- tmpl_var subscriber.email -->
+subject: Abuse Reported on <!-- tmpl_var list_settings.list_name --> (<!--tmpl_var list_settings.list -->) by <!-- tmpl_var subscriber.email -->
 ---
-
-
-Hello, <!-- tmpl_var list_settings.list_owner_email -->, 
 
 The following address: 
 
