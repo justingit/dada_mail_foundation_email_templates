@@ -8,7 +8,9 @@
     "start": "gulp",
     "build": "gulp --production",
     "zip": "gulp zip --production",
-    "litmus": "gulp litmus --production"
+    "litmus": "gulp litmus --production",
+    "noninteractive": "gulp noninteractive --production"
+	
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",

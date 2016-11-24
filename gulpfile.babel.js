@@ -33,6 +33,9 @@ gulp.task('default',
 gulp.task('litmus',
   gulp.series('build', creds, aws, litmus));
 
+gulp.task('noninteractive',
+  gulp.series('build'));
+  
 // Build emails, then zip
 gulp.task('zip',
   gulp.series('build', zip));
