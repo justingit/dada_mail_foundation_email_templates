@@ -1,5 +1,4 @@
 @import 'settings';
-@import 'theme';
 @import 'foundation-emails';
 
 
@@ -9,53 +8,43 @@ table.button.facebook table td {
   background: $facebook-button-background !important;
   border-color: $facebook-button-background;
 }
+
 table.button.twitter table td {
   background: $twitter-button-background !important;
   border-color: $twitter-button-background;
 } 
+
 table.button.google table td {
   background: $google-plus_button_background !important;
   border-color: $google-plus_button_background;
 }
 
-
 .banner {
   background: $banner-background;
 }
+
 .banner .columns {
   padding-bottom: 0;
 }
+
 .banner p {
   color: $banner-text-color;
   margin-bottom: 0;
 }
+
 .banner .wrapper-inner {
   padding: 20px; /*controls the height of the header*/
 }
+
 .banner .container {
   background: $banner-background;
 }
+
 .wrapper.secondary {
   background: $body-background;
 }
+
 .banner_img { 
 	// border: 1px solid black
 }
-
-.footer {
-  background: $footer-background;
-}
-.footer .columns {
-  padding-bottom: 0;
-}
-.footer p {
-  color: $footer-text-color;
-  margin-bottom: 0;
-}
-.footer .wrapper-inner {
-  padding: 20px; /*controls the height of the header*/
-}
-.footer .container {
-  background: $footer-background;
-}
-.footer_img {}
+ 

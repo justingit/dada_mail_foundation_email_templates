@@ -18,7 +18,7 @@
 
 $primary-color: #2199e8;
 $secondary-color: #777777;
-$success-color: #3adb76;
+$success-color: darken(#3adb76, 10%);
 $warning-color: #ffae00;
 $alert-color: #ec5840;
 $light-gray: #f3f3f3;
@@ -30,8 +30,8 @@ $pre-color: #ff6908;
 $global-width: 580px;
 $global-width-small: 95%;
 $global-gutter: 16px;
-$body-background: $light-gray;
-$container-background: $white;
+$body-background: #6a5750;
+$container-background: #f6f1ed;
 $global-padding: 16px;
 $global-margin: 16px;
 $global-radius: 3px;
@@ -59,7 +59,7 @@ $body-font-family: Helvetica, Arial, sans-serif;
 $global-font-weight: normal;
 $header-color: inherit;
 $global-line-height: 1.3;
-$global-font-size: 16px;
+$global-font-size: 14px;
 $body-line-height: $global-line-height;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-font-weight;
@@ -106,11 +106,12 @@ $button-font-size: (
   default: 16px,
   large: 20px,
 );
-$button-color: $white;
+$button-color: darken($white, 10%);
 $button-color-alt: $medium-gray;
 $button-font-weight: bold;
 $button-margin: 0 0 $global-margin 0;
-$button-background: $primary-color;
+
+$button-background: darken($primary-color, 10%);
 $button-border: 2px solid $button-background;
 $button-radius: $global-radius;
 $button-rounded: $global-rounded;
@@ -144,5 +145,13 @@ $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
+
+
+$banner-text-color: #f6f1ed;
+$banner-background: #30231d;
+
+$facebook-button-background:    darken(#3B5998, 10%);
+$twitter-button-background:     darken(#1daced, 10%);
+$google-plus_button_background: darken(#DB4A39, 10%);
 
 

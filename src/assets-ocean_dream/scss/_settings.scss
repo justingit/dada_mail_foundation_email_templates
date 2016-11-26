@@ -30,8 +30,8 @@ $pre-color: #ff6908;
 $global-width: 580px;
 $global-width-small: 95%;
 $global-gutter: 16px;
-$body-background: $light-gray;
-$container-background: $white;
+$body-background: #9ad3de;
+$container-background: $light-gray;
 $global-padding: 16px;
 $global-margin: 16px;
 $global-radius: 3px;
@@ -59,7 +59,7 @@ $body-font-family: Helvetica, Arial, sans-serif;
 $global-font-weight: normal;
 $header-color: inherit;
 $global-line-height: 1.3;
-$global-font-size: 16px;
+$global-font-size: 14px;
 $body-line-height: $global-line-height;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-font-weight;
@@ -72,7 +72,7 @@ $h6-font-size: 18px;
 $header-margin-bottom: 10px;
 $paragraph-margin-bottom: 10px;
 $small-font-size: 80%;
-$small-font-color: $medium-gray;
+$small-font-color: $black;
 $lead-font-size: $global-font-size * 1.25;
 $lead-line-height: 1.6;
 $text-padding: 10px;
@@ -144,5 +144,8 @@ $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
+
+$banner-text-color: $black;
+$banner-background: #89bdd3;
 
 
