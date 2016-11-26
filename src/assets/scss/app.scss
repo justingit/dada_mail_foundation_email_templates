@@ -5,22 +5,22 @@
 
 // http://foundation.zurb.com/forum/posts/46910-best-way-to-inline-custom-styles
 table.button.facebook table td {
-  background: #3B5998 !important;
-  border-color: #3B5998;
+  background: $facebook-button-background !important;
+  border-color: $facebook-button-background;
 }
 
 table.button.twitter table td {
-  background: #1daced !important;
-  border-color: #1daced;
+  background: $twitter-button-background !important;
+  border-color: $twitter-button-background;
 } 
 
 table.button.google table td {
-  background: #DB4A39 !important;
-  border-color: #DB4A39;
+  background: $google-plus_button_background !important;
+  border-color: $google-plus_button_background;
 }
 
 .banner {
-  background: #e9ebee;
+  background: $banner-background;
 }
 
 .banner .columns {
@@ -28,7 +28,7 @@ table.button.google table td {
 }
 
 .banner p {
-  color: #000000;
+  color: $banner-text-color;
   margin-bottom: 0;
 }
 
@@ -37,11 +37,11 @@ table.button.google table td {
 }
 
 .banner .container {
-  background: #e9ebee;
+  background: $banner-background;
 }
 
 .wrapper.secondary {
-  background: #e9ebee;
+  background: $banner-background;
 }
 
 .banner_img { 
