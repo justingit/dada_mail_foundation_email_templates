@@ -1,6 +1,7 @@
 ---
 to_phrase: <!-- tmpl_var list_settings.list_name --> Subscriber
 from_phrase: <!-- tmpl_var list_settings.list_name -->
+subject: <!-- tmpl_var list_settings.list_name --> Message
 ---
 
 <!-- tmpl_var email.preheader -->
