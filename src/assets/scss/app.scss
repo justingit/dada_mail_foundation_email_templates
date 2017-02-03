@@ -18,6 +18,10 @@ table.button.google table td {
   border-color: $google-plus_button_background;
 }
 
+table.button.youtube table td {
+  background: $youtube-button_background !important;
+  border-color: $youtube-button_background;
+}
 
 .banner {
   background: $banner-background;
