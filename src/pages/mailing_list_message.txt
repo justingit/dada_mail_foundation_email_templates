@@ -6,7 +6,6 @@ subject: <!-- tmpl_var list_settings.list_name --> Message
 
 <!-- tmpl_var email.preheader -->
 
-(Mailing list information, including how to remove yourself, is located at the end of this message.)
 __ 
 
 <!-- tmpl_var message_body -->
