@@ -18,6 +18,15 @@
 				<p>
 					<!-- tmpl_var list_settings.physical_address -->
 				</p>
+				
+				<!-- tmpl_if list_settings.list_phone_number -->
+					<p>
+						<a href="tel:<!-- tmpl_var list_settings.list_phone_number escape="HTML" -->">
+							<!-- tmpl_var list_settings.list_phone_number escape="HTML" -->
+						</a>
+					</p> 
+				<!-- /tmpl_if -->
+				
 			</columns>
 			<columns large="6">
 				
