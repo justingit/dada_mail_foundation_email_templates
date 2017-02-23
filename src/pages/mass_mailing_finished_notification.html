@@ -33,12 +33,23 @@
 			
 			</ul>
 	
-			<p>
-				See the up-to-date stats for this message in the Tracker plugin - these stats are only 
-				from when the mass mailing started, to when it finished. 
-				People will still be checking their email afterwards.
-			</p>
 
+			<!-- tmpl_unless mass_test -->
+				<p>
+					<container>
+						<row>
+							<columns>
+								<center>
+									<button href="<!-- tmpl_var S_PROGRAM_URL -->/plugins/tracker?prm=m&mid=<!-- tmpl_var message_id -->/" class="large radius">
+										View All Message Analytics
+									</button>
+								</center>
+							</columns>
+						</row>
+					</container>
+				</p>
+			<!-- /tmpl_unless -->
+			
 			<h2>
 				Keep up the good work! 
 			</h2>
