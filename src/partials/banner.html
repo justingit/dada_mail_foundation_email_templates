@@ -3,9 +3,21 @@
 		<row class="collapse">
 			<columns small="6" valign="middle">
 				<!-- tmpl_if list_settings.logo_image_url -->
-					<a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/">
-						<img src="<!-- tmpl_var list_settings.logo_image_url -->" class="banner_img">
-					</a>
+				
+					<!-- tmpl_if list_settings.website_url --> 
+					
+						<a href="<!-- tmpl_var website_url -->">
+							<img src="<!-- tmpl_var list_settings.logo_image_url -->" class="banner_img">
+						</a>
+						
+					<!-- tmpl_else --> 
+					
+						<a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/">
+							<img src="<!-- tmpl_var list_settings.logo_image_url -->" class="banner_img">
+						</a>
+					
+					<!-- /tmpl_if --> 
+					
 				<!-- /tmpl_if -->
 			</columns>
 			<columns small="6" valign="middle">
