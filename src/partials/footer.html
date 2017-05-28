@@ -10,11 +10,21 @@
 						Contact
 					</small>
 				</h4>
+				
+				<!-- tmpl_if list_settings.website_url -->
+					<p>
+						<a href="<!-- tmpl_var list_settings.website_url -->">
+							<!-- tmpl_var list_settings.website_url -->
+						</a>
+					</p>
+				<!-- /tmpl_if -->
+				
 				<p>
 					<a href="mailto:<!-- tmpl_var list_settings.list_owner_email -->">
 						<!-- tmpl_var list_settings.list_owner_email -->
 					</a>
 				</p>
+				
 				<p>
 					<!-- tmpl_var list_settings.physical_address -->
 				</p>
