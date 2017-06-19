@@ -1,0 +1,41 @@
+// http://colorpalettes.net/color-palette-3376/
+
+
+
+
+$global-font-size: 16px;
+
+
+//$secondary-color: #777777;
+
+
+
+$warning-color: #fecb01; 
+
+
+$body-background: #cf722a;
+$container-background: $white;
+
+$banner-background: #8aab00;
+$banner-text-color: $black;
+
+$footer-background: #b44601;
+$footer-text-color: $banner-text-color;
+
+$small-font-color: #333333; 
+
+
+$anchor-color: darken($primary-color, 20%);
+$anchor-color-visited: $anchor-color;
+$anchor-color-hover: darken($primary-color, 25%);
+$anchor-color-active: $anchor-color-hover; 
+
+
+$button-background:              #b44601; 
+$success-color: #8aab00; 
+
+
+$facebook-button-background:     #3B5998;
+$twitter-button-background:      #1daced;
+$google-plus_button_background:  #DB4A39;
+$youtube-button_background:      #c51109;

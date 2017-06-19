@@ -1,0 +1,27 @@
+//http://www.color-hex.com/color-palette/455
+
+
+$global-font-size: 16px;
+
+$body-background: #e2f4c7;
+$container-background: $white;
+
+$banner-background: #ff4e50;
+$banner-text-color: $black;
+
+$footer-background: #fc913a;
+$footer-text-color: $banner-text-color;
+$small-font-color: #663399; 
+
+$anchor-color: darken($primary-color, 10%);
+$anchor-color-visited: $anchor-color;
+$anchor-color-hover: darken($primary-color, 20%);
+$anchor-color-active: $anchor-color-hover;
+
+
+$success-color:                  lighten(#3adb76, 10%); 
+$button-background:              lighten($primary-color, 10%); 
+$facebook-button-background:     lighten(#3B5998, 10%);
+$twitter-button-background:      lighten(#1daced, 10%);
+$google-plus_button_background:  lighten(#DB4A39, 10%);
+$youtube-button_background:      lighten(#c51109, 20%);

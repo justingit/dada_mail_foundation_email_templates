@@ -14,14 +14,26 @@ my $distros = {
 		target_dir => 'default',
 	},
 	
+	bird_of_paradise => { 
+		theme_file     => 'theme-bird_of_paradise',
+		target_dir     => 'bird_of_paradise',
+	},
+	
 	car_camping => { 
 		theme_file     => 'theme-car_camping',
 		target_dir     => 'car_camping',
 	},
+	
 	chocolate_love => { 
 		theme_file     => 'theme-chocolate_love',
 		target_dir     => 'chocolate_love',
 	},
+	
+	digging_in_the_dirt => { 
+		theme_file     => 'theme-digging_in_the_dirt',
+		target_dir => 'digging_in_the_dirt',
+	
+	}
 	
 	dm_deep_red => { 
 		theme_file     => 'theme-dm_deep_red',
@@ -57,6 +69,13 @@ my $distros = {
 		theme_file     => 'theme-salmon_are_running',
 		target_dir     => 'salmon_are_running',
 	},
+
+	summer_is_coming => { 
+		theme_file     => 'theme-summer_is_coming',
+		target_dir     => 'summer_is_coming',
+	},
+	
+	
 	
 	techwear_in_the_alps => { 
 		theme_file     => 'theme-techwear_in_the_alps',
