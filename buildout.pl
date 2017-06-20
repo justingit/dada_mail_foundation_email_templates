@@ -33,7 +33,7 @@ my $distros = {
 		theme_file     => 'theme-digging_in_the_dirt',
 		target_dir => 'digging_in_the_dirt',
 	
-	}
+	},
 	
 	dm_deep_red => { 
 		theme_file     => 'theme-dm_deep_red',
@@ -63,6 +63,11 @@ my $distros = {
 	ocean_dream => { 
 		theme_file => 'theme-ocean_dream',
 		target_dir => 'ocean_dream',
+	},
+	
+	plain_white_t => {
+		theme_file => 'theme-plain_white_t',
+		target_dir => 'plain_white_t',
 	},
 	
 	salmon_are_running => { 
