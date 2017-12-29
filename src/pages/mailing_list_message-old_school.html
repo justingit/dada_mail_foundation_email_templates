@@ -52,12 +52,13 @@
 
 				<p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
 
-				<!-- tmpl_if PROFILE_ENABLED --> 
-				<strong>
-				 <a href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/">Manage Your Subscription &#187;</a>
-				 </strong>
- 
-				 or, 
+				<!-- tmpl_if profile_settings.enabled -->
+					<strong>
+						<a href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/">
+							Manage Your Subscription &#187;
+						</a>
+					 </strong>
+					 or, 
 				<!-- /tmpl_if --> 
 
 				<strong>

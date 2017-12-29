@@ -39,7 +39,7 @@ Please save this email message for future reference.
 Unsubscribe links (like this one) do expire, so look for the freshest
  unsubscribe links in the mailing list messages you receive. 
 
-<!-- tmpl_if PROFILE_ENABLED --><!-- tmpl_if new_profile --> 
+<!-- tmpl_if profile_settings.enabled --><!-- tmpl_if new_profile --> 
 * Check out your Profile to update your subscription information: 
 
 	Profile Login: <!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/
