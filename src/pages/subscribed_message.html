@@ -43,16 +43,17 @@
 				</ul>
 			</callout>
 				<!-- tmpl_if profile_settings.enabled -->
-					<!-- tmpl_if new_profile --> 
-						<h3>
-							Profile
-						</h3>
+					<h3>
+						Profile
+					</h3>
 
-						<center>
-							<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="large radius success expand">
-								Click Here to Visit your Profile
-							</button>
-						</center>
+					<center>
+						<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="large radius success expand">
+							Click Here to Visit your Profile
+						</button>
+					</center>
+					
+					<!-- tmpl_if new_profile --> 
 						<ul>
 							<li>
 								<strong>
@@ -67,7 +68,6 @@
 								<!-- tmpl_var profile.password -->
 							</li>
 						</ul>
-
 					<!-- /tmpl_if -->
 				<!-- /tmpl_if --> 
 
@@ -96,15 +96,36 @@
 						<!-- tmpl_var list_settings.list_owner_email -->
 					</a>
 				</li>
-				<li>
-					<strong>
-						<a href="<!-- tmpl_var list_unsubscribe_link -->">
-							Remove yourself
-						</a>
-					</strong>
-					Unsubscribe links (like this one) do expire, so look for the freshest
-					unsubscribe links in the mailing list messages that you will receive.
-				</li>
+				
+				
+				
+				
+				
+				<!-- tmpl_if list_settings.private_list -->						
+					<!-- tmpl_if show_request_removal_links -->
+						<li>
+							<strong>
+								<a href="<!-- tmpl_var list_unsubscribe_link -->">
+									Request Removal
+								</a>
+							</strong>
+							&quote;Request Removal&quote; links (like this one) do expire, so look for the freshest
+							request links in the mailing list messages that you will receive.
+						</li>
+					<!-- /tmpl_if -->
+				<!-- tmpl_else -->
+					<li>
+						<strong>
+							<a href="<!-- tmpl_var list_unsubscribe_link -->">
+								Remove Yourself
+							</a>
+						</strong>
+						Unsubscribe links (like this one) do expire, so look for the freshest
+						unsubscribe links in the mailing list messages that you will receive.
+					</li>
+				<!-- /tmpl_if -->
+				
+				
 			</ul>
 		</columns>
 	</row>

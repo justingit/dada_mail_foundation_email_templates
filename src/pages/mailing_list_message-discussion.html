@@ -49,17 +49,19 @@
 					<columns small="12" large="2">
 					</columns>
 					<columns small="12" large="5">
-						
-						
-						<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
-							<!-- tmpl_if list_settings.private_list -->
-								Request Removal
-							<!-- tmpl_else -->
-								Unsubscribe
+												
+						<!-- tmpl_if list_settings.private_list -->						
+							<!-- tmpl_if show_request_removal_links -->
+								<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
+									Request Removal
+								</button>
 							<!-- /tmpl_if -->
-						</button>
-						
-						
+						<!-- tmpl_else -->
+							<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
+								Unsubscribe
+							</button>
+						<!-- /tmpl_if -->
+
 					</columns>
 				</row>
 			</container>

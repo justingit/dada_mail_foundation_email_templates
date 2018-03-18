@@ -9,12 +9,16 @@ From: <!-- tmpl_var sender.email -->
 
 * Post:
     mailto:<!-- tmpl_var list_settings.discussion_pop_email -->
+<!-- tmpl_if profile_settings.enabled -->
 * Manage Your Subscription: 
     <!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/
-<!-- tmpl_if list_settings.private_list -->
-* Request Removal: 
-	<!-- tmpl_var list_unsubscribe_link -->
-<!-- tmpl_else -->
-* Unsubscribe
-	<!-- tmpl_var list_unsubscribe_link -->
 <!-- /tmpl_if -->
+<!-- tmpl_if list_settings.private_list --><!-- tmpl_if show_request_removal_links -->
+* Request Removal: 
+	<!-- tmpl_var list_unsubscribe_link --><!-- /tmpl_if --><!-- tmpl_else -->
+* Unsubscribe
+	<!-- tmpl_var list_unsubscribe_link --><!-- /tmpl_if -->
+
+
+
+

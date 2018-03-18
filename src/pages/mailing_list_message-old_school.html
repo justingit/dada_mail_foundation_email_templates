@@ -61,11 +61,23 @@
 					 or, 
 				<!-- /tmpl_if --> 
 
-				<strong>
-				 <a href="<!-- tmpl_var list_unsubscribe_link -->">
-				  Unsubscribe Automatically &#187;
-				 </a>
-				</strong> </p> 
+				<!-- tmpl_if list_settings.private_list -->						
+					<!-- tmpl_if show_request_removal_links -->
+						<strong>
+						 <a href="<!-- tmpl_var list_unsubscribe_link -->">
+						  	Request Removal &#187;
+						 </a>
+						</strong>
+					<!-- /tmpl_if -->
+				<!-- tmpl_else -->
+					<strong>
+					 <a href="<!-- tmpl_var list_unsubscribe_link -->">
+					 	 Unsubscribe Automatically &#187;
+					 </a>
+					</strong>
+				<!-- /tmpl_if -->
+			
+			</p> 
 
 			</columns>
 		</row>
