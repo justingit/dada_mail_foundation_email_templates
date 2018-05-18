@@ -5,15 +5,17 @@
 		<columns small="12" large="12">
 
 			<h1>
-				You Have Been Invited!
+				You Have Been Invited
 			</h1>
+			
+				<!-- tmpl_var custom_invite_message_html -->
 			
 			<container>
 			<row>
 				<columns>
 					<center>
-						<button href="<!-- tmpl_var list_confirm_subscribe_link -->" class="large radius success">
-							Click Here to Join, <!-- tmpl_var list_settings.list_name escape="HTML" -->
+						<button href="<!-- tmpl_var S_PROGRAM_URL -->/subscribe_landing/<!-- tmpl_list_settings.list -->/" class="large radius success">
+							Subscribe to, <!-- tmpl_var list_settings.list_name escape="HTML" -->
 						</button>
 					</center>
 				</columns>

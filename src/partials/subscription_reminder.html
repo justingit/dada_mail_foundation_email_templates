@@ -1,73 +1,73 @@
 <wrapper> 
-	<container>
-		<row>
-			<columns small="12" large="12">
-				
-				<spacer size="25"></spacer>
-				
-				<!-- tmpl_if list_settings.show_archives --> 
-					<!-- tmpl_if list_settings.archive_send_form --> 
-						<container>
-							<row>
-								<columns small="12" large="12">
-									<button href="<!-- tmpl_var forward_to_a_friend_link -->" class="small radius expand success">				
-											Forward this Message to a Friend
-									</button>
-								</columns>	
-							</row>
-						</container>
-					<!-- /tmpl_if --> 
-				<!-- /tmpl_if --> 
+ <container>
+  <row>
+   <columns small="12" large="12">
+    
+    <spacer size="25"></spacer>
+    
+    <!-- tmpl_if list_settings.show_archives --> 
+     <!-- tmpl_if list_settings.archive_send_form --> 
+      <container>
+       <row>
+        <columns small="12" large="12">
+         <button href="<!-- tmpl_var forward_to_a_friend_link -->" class="small radius expand success">    
+           Forward this Message to a Friend
+         </button>
+        </columns> 
+       </row>
+      </container>
+     <!-- /tmpl_if --> 
+    <!-- /tmpl_if --> 
 
 
-						<h4>
-							<small>
-								Subscription Reminder
-							</small>
-						</h4>
-					 
-						<p>You're Subscribed to:
-						<strong>
-							<a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->"> 
-								<!-- tmpl_var list_settings.list_name -->
-							</a>
-						</strong> 
-						using the address: 
-						<strong>
-							<!-- tmpl_var subscriber.email -->
-						</strong>
-					</p>
-					<container>
-						<row>
-							<columns small="12" large="5">
-									
-					
-								<!-- tmpl_if profile_settings.enabled -->
-									<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="tiny radius expanded">				
-										Manage Your Subscription
-									</button>
-								<!-- /tmpl_if --> 
-								</columns>
-								<columns small="12" large="2">
-								</columns>
-								<columns small="12" large="5">
-								
-								<!-- tmpl_if list_settings.private_list -->						
-									<!-- tmpl_if show_request_removal_links -->
-										<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="tiny radius expanded">
-											Request Removal
-										</button>
-									<!-- /tmpl_if -->
-								<!-- tmpl_else -->
-									<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="tiny radius expanded">
-										Unsubscribe Automatically
-									</button>
-								<!-- /tmpl_if -->
-								
-							</columns>
-						</row>
-					</container>
-			</columns>
-		</row>
-	</container>
+      <h4>
+       <small>
+        Subscription Reminder
+       </small>
+      </h4>
+      
+      <p>You're Subscribed to:
+      <strong>
+       <a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->"> 
+        <!-- tmpl_var list_settings.list_name -->
+       </a>
+      </strong> 
+      using the address: 
+      <strong>
+       <!-- tmpl_var subscriber.email -->
+      </strong>
+     </p>
+     <container>
+      <row>
+       <columns small="12" large="5">
+         
+     
+        <!-- tmpl_if profile_settings.enabled -->
+         <button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="tiny radius expanded">    
+          Manage Your Subscription
+         </button>
+        <!-- /tmpl_if --> 
+        </columns>
+        <columns small="12" large="2">
+        </columns>
+        <columns small="12" large="5">
+        
+        <!-- tmpl_if list_settings.private_list -->      
+         <!-- tmpl_if show_request_removal_links -->
+          <button  href="<!-- tmpl_var list_unsubscribe_link -->" class="tiny radius expanded">
+           Request Removal
+          </button>
+         <!-- /tmpl_if -->
+        <!-- tmpl_else -->
+         <button  href="<!-- tmpl_var list_unsubscribe_link -->" class="tiny radius expanded">
+          Unsubscribe Automatically
+         </button>
+        <!-- /tmpl_if -->
+        
+       </columns>
+      </row>
+     </container>
+   </columns>
+  </row>
+ </container>
 </wrapper>

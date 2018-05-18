@@ -1,73 +1,73 @@
 <wrapper>
 <container>
-	<row>
-		<columns small="12" large="12">	
-			<spacer size="25"></spacer>
-			
-			<small>
-				<strong> 
-					From: <a href="mailto:<!-- tmpl_var sender.email -->"><!-- tmpl_var sender.email --></a>
-				</strong>
-			</small>
-			
-			
-			{{> message_body}}
+ <row>
+  <columns small="12" large="12"> 
+   <spacer size="25"></spacer>
+   
+   <small>
+    <strong> 
+     From: <a href="mailto:<!-- tmpl_var sender.email -->"><!-- tmpl_var sender.email --></a>
+    </strong>
+   </small>
+   
+   
+   {{> message_body}}
 
-		</columns>
-	</row>
+  </columns>
+ </row>
 </container>
 
 
 
 <container>
-	<row>
-		<columns small="12" large="12">		
-			
-			<spacer size="25"></spacer>
-			<h4>
-				<small>
-					<!-- tmpl_var list_settings.list_name -->
-				</small>
-			</h4>	
-			
-			<container>
-				<row>
-					<columns small="12" large="12">
-						<button href="mailto:<!-- tmpl_var list_settings.discussion_pop_email -->" class="small radius expand success">				
-							Post to:&nbsp;<!-- tmpl_var list_settings.list_name -->&nbsp;(&nbsp;<!-- tmpl_var list_settings.discussion_pop_email -->&nbsp;)
-						</button>
-					</columns>	
-				</row>
-				<row>
-					<columns small="12" large="5">
-						<!-- tmpl_if profile_settings.enabled -->
-							<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="small radius expand">				
-								Manage Your Subscription
-							</button>
-						<!-- /tmpl_if -->
-					</columns>
-					<columns small="12" large="2">
-					</columns>
-					<columns small="12" large="5">
-												
-						<!-- tmpl_if list_settings.private_list -->						
-							<!-- tmpl_if show_request_removal_links -->
-								<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
-									Request Removal
-								</button>
-							<!-- /tmpl_if -->
-						<!-- tmpl_else -->
-							<button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
-								Unsubscribe
-							</button>
-						<!-- /tmpl_if -->
+ <row>
+  <columns small="12" large="12">  
+   
+   <spacer size="25"></spacer>
+   <h4>
+    <small>
+     <!-- tmpl_var list_settings.list_name -->
+    </small>
+   </h4> 
+   
+   <container>
+    <row>
+     <columns small="12" large="12">
+      <button href="mailto:<!-- tmpl_var list_settings.discussion_pop_email -->" class="small radius expand success">    
+       Post to:&nbsp;<!-- tmpl_var list_settings.list_name -->&nbsp;(&nbsp;<!-- tmpl_var list_settings.discussion_pop_email -->&nbsp;)
+      </button>
+     </columns> 
+    </row>
+    <row>
+     <columns small="12" large="5">
+      <!-- tmpl_if profile_settings.enabled -->
+       <button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="small radius expand">    
+        Manage Your Subscription
+       </button>
+      <!-- /tmpl_if -->
+     </columns>
+     <columns small="12" large="2">
+     </columns>
+     <columns small="12" large="5">
+            
+      <!-- tmpl_if list_settings.private_list -->      
+       <!-- tmpl_if show_request_removal_links -->
+        <button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
+         Request Removal
+        </button>
+       <!-- /tmpl_if -->
+      <!-- tmpl_else -->
+       <button  href="<!-- tmpl_var list_unsubscribe_link -->" class="small radius warning expand">
+        Unsubscribe
+       </button>
+      <!-- /tmpl_if -->
 
-					</columns>
-				</row>
-			</container>
-			
-		</columns>
-	</row>
+     </columns>
+    </row>
+   </container>
+   
+  </columns>
+ </row>
 </container>
 
 </wrapper>

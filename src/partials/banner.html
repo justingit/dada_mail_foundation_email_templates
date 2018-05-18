@@ -1,39 +1,39 @@
 <wrapper class="banner">
-	<!-- <container> -->
-		<row class="collapse">
-			<columns small="6" valign="middle">
-				<!-- tmpl_if list_settings.logo_image_url -->
-				
-					<!-- tmpl_if list_settings.website_url --> 
-					
-						<a href="<!-- tmpl_var website_url -->">
-							<img src="<!-- tmpl_var list_settings.logo_image_url -->" class="banner_img">
-						</a>
-						
-					<!-- tmpl_else --> 
-					
-						<a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/">
-							<img src="<!-- tmpl_var list_settings.logo_image_url -->" class="banner_img">
-						</a>
-					
-					<!-- /tmpl_if --> 
-					
-				<!-- /tmpl_if -->
-			</columns>
-			<columns small="6" valign="middle">
-			<p class="text-right">
-				<!-- tmpl_if email.preheader -->
-					<!-- tmpl_var email.preheader -->
-				<!-- tmpl_else -->
-					<!-- tmpl_if email.subject -->
-						<!-- tmpl_var email.subject -->
-					<!-- tmpl_else -->
-						<!-- tmpl_var list_settings.list_name -->
-					<!-- /tmpl_if -->
-				<!-- /tmpl_if --> 
-			</p>
-		</columns>
-		</row>
-	<!-- </container> -->
+ <!-- <container> -->
+  <row class="collapse">
+   <columns small="6" valign="middle">
+    <!-- tmpl_if list_settings.logo_image_url -->
+    
+     <!-- tmpl_if list_settings.website_url --> 
+     
+      <a href="<!-- tmpl_var website_url -->">
+       <img src="<!-- tmpl_var list_settings.logo_image_url -->" class="banner_img">
+      </a>
+      
+     <!-- tmpl_else --> 
+     
+      <a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/">
+       <img src="<!-- tmpl_var list_settings.logo_image_url -->" class="banner_img">
+      </a>
+     
+     <!-- /tmpl_if --> 
+     
+    <!-- /tmpl_if -->
+   </columns>
+   <columns small="6" valign="middle">
+   <p class="text-right">
+    <!-- tmpl_if email.preheader -->
+     <!-- tmpl_var email.preheader -->
+    <!-- tmpl_else -->
+     <!-- tmpl_if email.subject -->
+      <!-- tmpl_var email.subject -->
+     <!-- tmpl_else -->
+      <!-- tmpl_var list_settings.list_name -->
+     <!-- /tmpl_if -->
+    <!-- /tmpl_if --> 
+   </p>
+  </columns>
+  </row>
+ <!-- </container> -->
 </wrapper>
 <spacer size="25"></spacer>

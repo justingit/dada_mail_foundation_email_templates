@@ -1,35 +1,35 @@
 {{> banner}}
 <container>
-	<row>
-		<columns small="12" large="12">
-			<h1>Farewell!</h1>
-			<callout class="success">
-				<p>
-					You have been removed from <!-- tmpl_var list_settings.list_name -->.
-				</p>
-			</callout>
-			<ul>
-				<li>
-					<strong>
-						Date of Removal:
-					</strong> <!-- tmpl_var date -->
-				</li>
-			</ul>
-			<p>
-				Thanks for having been a subscriber.
-			</p>
-			<container>
-				<row>
-					<columns>
-						<center>
-							<button href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/" class="large radius success expand">
-								Revisit <!-- tmpl_var list_settings.list_name -->
-							</button>
-						</center>
-					</columns>
-				</row>
-			</container>
-		</columns>
-	</row>
+ <row>
+  <columns small="12" large="12">
+   <h1>Farewell!</h1>
+   <callout class="success">
+    <p>
+     You have been removed from <!-- tmpl_var list_settings.list_name -->.
+    </p>
+   </callout>
+   <ul>
+    <li>
+     <strong>
+      Date of Removal:
+     </strong> <!-- tmpl_var date -->
+    </li>
+   </ul>
+   <p>
+    Thanks for having been a subscriber.
+   </p>
+   <container>
+    <row>
+     <columns>
+      <center>
+       <button href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/" class="large radius success expand">
+        Revisit <!-- tmpl_var list_settings.list_name -->
+       </button>
+      </center>
+     </columns>
+    </row>
+   </container>
+  </columns>
+ </row>
 </container>
 {{> footer}}

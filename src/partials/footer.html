@@ -3,77 +3,77 @@
 <spacer size="25"></spacer>
 
 <wrapper class="footer">
-		<row class="collapse">
-			<columns large="6">
-				<h4>
-					<small>
-						Contact
-					</small>
-				</h4>
-				
-				<!-- tmpl_if list_settings.website_url -->
-					<p>
-						<a href="<!-- tmpl_var list_settings.website_url -->">
-							<!-- tmpl_var list_settings.website_url -->
-						</a>
-					</p>
-				<!-- /tmpl_if -->
-				
-				<p>
-					<a href="mailto:<!-- tmpl_var list_settings.list_owner_email -->">
-						<!-- tmpl_var list_settings.list_owner_email -->
-					</a>
-				</p>
-				
-				<p>
-					<!-- tmpl_var list_settings.physical_address -->
-				</p>
-				
-				<!-- tmpl_if list_settings.list_phone_number -->
-					<p>
-						<a href="tel:<!-- tmpl_var list_settings.list_phone_number -->">
-							<!-- tmpl_var list_settings.list_phone_number -->
-						</a>
-					</p> 
-				<!-- /tmpl_if -->
-				
-			</columns>
-			<columns large="6">
-				
-            	 <!-- tmpl_if expr="(defined(list_settings.facebook_page_url)) || (defined(list_settings.twitter_url)) || (defined(list_settings.google_plus_url))" -->
-			   
-					<h4>
-						<small>
-							Connect
-						</small>
-					</h4> 
-					   
-					<!-- tmpl_if list_settings.facebook_page_url -->
-						<button class="small facebook expand" href="<!-- tmpl_var list_settings.facebook_page_url -->">
-							Facebook
-						</button>
-					<!-- /tmpl_if -->
-					
-					<!-- tmpl_if list_settings.youtube_url -->
-						<button class="small youtube expand" href="<!-- tmpl_var list_settings.youtube_url -->">
-							Youtube
-						</button>
-					<!-- /tmpl_if -->
-				
-					<!-- tmpl_if list_settings.twitter_url -->
-						<button class="small twitter expand" href="<!-- tmpl_var list_settings.twitter_url -->">
-							Twitter
-						</button>
-					<!-- /tmpl_if -->
-				
-					<!-- tmpl_if list_settings.google_plus_url -->
-						<button class="small google expand" href="<!-- tmpl_var list_settings.google_plus_url -->">
-							Google+
-						</button>
-					<!-- /tmpl_if -->
-					
-				<!-- /tmpl_if -->
-			
-			</columns>
-		</row>
+  <row class="collapse">
+   <columns large="6">
+    <h4>
+     <small>
+      Contact
+     </small>
+    </h4>
+    
+    <!-- tmpl_if list_settings.website_url -->
+     <p>
+      <a href="<!-- tmpl_var list_settings.website_url -->">
+       <!-- tmpl_var list_settings.website_url -->
+      </a>
+     </p>
+    <!-- /tmpl_if -->
+    
+    <p>
+     <a href="mailto:<!-- tmpl_var list_settings.list_owner_email -->">
+      <!-- tmpl_var list_settings.list_owner_email -->
+     </a>
+    </p>
+    
+    <p>
+     <!-- tmpl_var list_settings.physical_address -->
+    </p>
+    
+    <!-- tmpl_if list_settings.list_phone_number -->
+     <p>
+      <a href="tel:<!-- tmpl_var list_settings.list_phone_number -->">
+       <!-- tmpl_var list_settings.list_phone_number -->
+      </a>
+     </p> 
+    <!-- /tmpl_if -->
+    
+   </columns>
+   <columns large="6">
+    
+              <!-- tmpl_if expr="(defined(list_settings.facebook_page_url)) || (defined(list_settings.twitter_url)) || (defined(list_settings.google_plus_url))" -->
+      
+     <h4>
+      <small>
+       Connect
+      </small>
+     </h4> 
+        
+     <!-- tmpl_if list_settings.facebook_page_url -->
+      <button class="small facebook expand" href="<!-- tmpl_var list_settings.facebook_page_url -->">
+       Facebook
+      </button>
+     <!-- /tmpl_if -->
+     
+     <!-- tmpl_if list_settings.youtube_url -->
+      <button class="small youtube expand" href="<!-- tmpl_var list_settings.youtube_url -->">
+       Youtube
+      </button>
+     <!-- /tmpl_if -->
+    
+     <!-- tmpl_if list_settings.twitter_url -->
+      <button class="small twitter expand" href="<!-- tmpl_var list_settings.twitter_url -->">
+       Twitter
+      </button>
+     <!-- /tmpl_if -->
+    
+     <!-- tmpl_if list_settings.google_plus_url -->
+      <button class="small google expand" href="<!-- tmpl_var list_settings.google_plus_url -->">
+       Google+
+      </button>
+     <!-- /tmpl_if -->
+     
+    <!-- /tmpl_if -->
+   
+   </columns>
+  </row>
 </wrapper> 

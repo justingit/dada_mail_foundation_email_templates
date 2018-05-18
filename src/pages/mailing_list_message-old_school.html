@@ -1,85 +1,85 @@
 <spacer size="25"></spacer>
 <wrapper> 
-	<container>
-		<row>
-			<columns small="12" large="12">
+ <container>
+  <row>
+   <columns small="12" large="12">
 
-				<p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
-				 <em>
-				  (Mailing list information, including how to remove yourself, 
-				is located at the end of this message.)
-				  </em>
-				</p>
+    <p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
+     <em>
+      (Mailing list information, including how to remove yourself, 
+    is located at the end of this message.)
+      </em>
+    </p>
 
-				{{> message_body}}
+    {{> message_body}}
 
 
-				<!-- tmpl_if list_settings.show_archives --> 
-					<!-- tmpl_if list_settings.archive_send_form --> 
-	
-						<p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
-						 <strong>
-						  <a href="<!-- tmpl_var forward_to_a_friend_link -->">
-						   Forward this Message to a Friend &#187;
-						  </a>
-						 </strong>
-						</p>
-		
-					<!-- /tmpl_if --> 
-				<!-- /tmpl_if --> 
-				<p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
-				 <strong>
-				  Subscription Reminder:</strong> You're Subscribed to:
-				 <strong>
-				  <a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/"> 
-				  <!-- tmpl_var list_settings.list_name -->
-				 </a>
-				 </strong> 
-				 using the address: 
-				 <strong>
-				  <!-- tmpl_var subscriber.email --> 
-				 </strong>
-				</p>
+    <!-- tmpl_if list_settings.show_archives --> 
+     <!-- tmpl_if list_settings.archive_send_form --> 
+ 
+      <p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
+       <strong>
+        <a href="<!-- tmpl_var forward_to_a_friend_link -->">
+         Forward this Message to a Friend &#187;
+        </a>
+       </strong>
+      </p>
+  
+     <!-- /tmpl_if --> 
+    <!-- /tmpl_if --> 
+    <p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
+     <strong>
+      Subscription Reminder:</strong> You're Subscribed to:
+     <strong>
+      <a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/"> 
+      <!-- tmpl_var list_settings.list_name -->
+     </a>
+     </strong> 
+     using the address: 
+     <strong>
+      <!-- tmpl_var subscriber.email --> 
+     </strong>
+    </p>
 
-				<p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
-				 From: 
-				 <strong>
-				  <!-- tmpl_var list_settings.list_owner_email -->
-				 </strong>
-				<br />
-				<!-- tmpl_var list_settings.physical_address -->
-				</p>
+    <p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
+     From: 
+     <strong>
+      <!-- tmpl_var list_settings.list_owner_email -->
+     </strong>
+    <br />
+    <!-- tmpl_var list_settings.physical_address -->
+    </p>
 
-				<p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
+    <p style="font:.8em/1.6em Helvetica,Verdana,'Sans-serif'">
 
-				<!-- tmpl_if profile_settings.enabled -->
-					<strong>
-						<a href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/">
-							Manage Your Subscription &#187;
-						</a>
-					 </strong>
-					 or, 
-				<!-- /tmpl_if --> 
+    <!-- tmpl_if profile_settings.enabled -->
+     <strong>
+      <a href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/">
+       Manage Your Subscription &#187;
+      </a>
+      </strong>
+      or, 
+    <!-- /tmpl_if --> 
 
-				<!-- tmpl_if list_settings.private_list -->						
-					<!-- tmpl_if show_request_removal_links -->
-						<strong>
-						 <a href="<!-- tmpl_var list_unsubscribe_link -->">
-						  	Request Removal &#187;
-						 </a>
-						</strong>
-					<!-- /tmpl_if -->
-				<!-- tmpl_else -->
-					<strong>
-					 <a href="<!-- tmpl_var list_unsubscribe_link -->">
-					 	 Unsubscribe Automatically &#187;
-					 </a>
-					</strong>
-				<!-- /tmpl_if -->
-			
-			</p> 
+    <!-- tmpl_if list_settings.private_list -->      
+     <!-- tmpl_if show_request_removal_links -->
+      <strong>
+       <a href="<!-- tmpl_var list_unsubscribe_link -->">
+         Request Removal &#187;
+       </a>
+      </strong>
+     <!-- /tmpl_if -->
+    <!-- tmpl_else -->
+     <strong>
+      <a href="<!-- tmpl_var list_unsubscribe_link -->">
+        Unsubscribe Automatically &#187;
+      </a>
+     </strong>
+    <!-- /tmpl_if -->
+   
+   </p> 
 
-			</columns>
-		</row>
-	</container>
+   </columns>
+  </row>
+ </container>
 </wrapper>
