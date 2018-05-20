@@ -15,7 +15,7 @@ The List Owner of, "<!-- tmpl_var list_settings.list_name -->" (<!-- tmpl_var li
 <!-- tmpl_var list_settings.info --> 
 
 * If you'd like to subscribe, just click the link below: 
-<!-- tmpl_var S_PROGRAM_URL -->/subscribe_landing/<!-- tmpl_list_settings.list -->/
+<!-- tmpl_var S_PROGRAM_URL -->/subscribe_landing/<!-- tmpl_var list_settings.list -->/
 
 <!-- tmpl_if list_settings.group_list --> 
 * This mailing list is a group discussion list <!-- tmpl_if list_settings.enable_moderation -->(moderated)<!-- tmpl_else -->(unmoderated)<!-- /tmpl_if -->. Once subscribed, you may start a new thread, by sending an email message to, <!-- tmpl_var list_settings.discussion_pop_email --> 
