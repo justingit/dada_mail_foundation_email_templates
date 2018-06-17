@@ -1,4 +1,5 @@
 ---
+to_phrase: <!-- tmpl_var list_settings.list_name --> Subscriber
 subject: <!-- tmpl_var list_settings.list_name --> Message
 ---
 From: <!-- tmpl_var sender.email -->
@@ -18,7 +19,3 @@ From: <!-- tmpl_var sender.email -->
 	<!-- tmpl_var list_unsubscribe_link --><!-- /tmpl_if --><!-- tmpl_else -->
 * Unsubscribe
 	<!-- tmpl_var list_unsubscribe_link --><!-- /tmpl_if -->
-
-
-
-
