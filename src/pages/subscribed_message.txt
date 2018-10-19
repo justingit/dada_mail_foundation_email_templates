@@ -33,7 +33,7 @@ Please save this email message for future reference.
 * Need Help? Contact: 
 <!-- tmpl_var list_settings.list_owner_email -->
 
-<!-- tmpl_if list_settings.private_list --><!-- tmpl_if show_request_removal_links -->
+<!-- tmpl_if list_settings.private_list --><!-- tmpl_if list_settings.show_request_removal_links -->
 * Request Removal: 
 <!-- tmpl_var list_unsubscribe_link -->
 &quote;Request Removal&quote; links (like this one) do expire, so look for the freshest
