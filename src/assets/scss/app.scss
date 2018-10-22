@@ -63,3 +63,50 @@ table.button.youtube table td {
   background: $footer-background;
 }
 .footer_img {}
+
+
+// This is to hopefully fix the callout issue: 
+
+table.callout {
+  margin-bottom: $callout-margin-bottom;
+  Margin-bottom: $callout-margin-bottom;
+}
+
+th.callout-inner {
+  width: 100%;
+  border: $callout-border;
+  padding: $callout-padding;
+  background: $callout-background;
+
+  &.primary {
+    background: scale-color($primary-color, $lightness: $callout-background-fade);
+    border: $callout-border-secondary;
+    color: $black;
+  }
+
+  &.secondary {
+    background: scale-color($secondary-color, $lightness: $callout-background-fade);
+    border: $callout-border-secondary;
+    color: $black;
+  }
+
+  &.success {
+    background: scale-color($success-color, $lightness: $callout-background-fade);
+    border: $callout-border-success;
+    color: $black;
+  }
+
+  &.warning {
+    background: scale-color($warning-color, $lightness: $callout-background-fade);
+    border: $callout-border-warning;
+    color: $black;
+  }
+
+  &.alert {
+    background: scale-color($alert-color, $lightness: $callout-background-fade);
+    border: $callout-border-alert;
+    color: $black;
+  }
+}
+
+
