@@ -9,86 +9,99 @@ my $working_dir = './';
 
 my $distros = { 
 
-	default => { 
-		theme_file => 'theme-bak',
-		target_dir => 'default',
-	},
 	
-	bird_of_paradise => { 
-		theme_file     => 'theme-bird_of_paradise',
-		target_dir     => 'bird_of_paradise',
-	},
+#	default => { 
+#		theme_file => 'theme-bak',
+#		target_dir => 'default',
+#	},
 	
-	car_camping => { 
-		theme_file     => 'theme-car_camping',
-		target_dir     => 'car_camping',
-	},
+	pacifico => { 
+		theme_file     => 'theme-pacifico',
+		target_dir     => 'pacifico',
 	
-	chocolate_love => { 
-		theme_file     => 'theme-chocolate_love',
-		target_dir     => 'chocolate_love',
-	},
-	
-	digging_in_the_dirt => { 
-		theme_file     => 'theme-digging_in_the_dirt',
-		target_dir => 'digging_in_the_dirt',
-	
-	},
-	
-	dm_deep_red => { 
-		theme_file     => 'theme-dm_deep_red',
-		target_dir => 'dm_deep_red',
-	},
-	
-	flamingo_park => { 
-		theme_file     => 'theme-flamingo_park',
-		target_dir     => 'flamingo_park',
-	},
-	
-	holiday_hello_candy_cane => { 
-		theme_file     => 'theme-holiday_hello_candy_cane',
-		target_dir     => 'holiday_hello_candy_cane',
-	},
-	
-	minty_fresh => { 
-		theme_file     => 'theme-minty_fresh',
-		target_dir     => 'minty_fresh',
-	},
-		
-	nonviolent_violet => { 
-		theme_file     => 'theme-nonviolent_violet',
-		target_dir     => 'nonviolent_violet',
-	},
+	}, 
 
-	ocean_dream => { 
-		theme_file => 'theme-ocean_dream',
-		target_dir => 'ocean_dream',
-	},
-	
-	plain_white_t => {
-		theme_file => 'theme-plain_white_t',
-		target_dir => 'plain_white_t',
-	},
-	
-	salmon_are_running => { 
-		theme_file     => 'theme-salmon_are_running',
-		target_dir     => 'salmon_are_running',
-	},
-
-	summer_is_coming => { 
-		theme_file     => 'theme-summer_is_coming',
-		target_dir     => 'summer_is_coming',
-	},
-	
-	
-	
-	techwear_in_the_alps => { 
-		theme_file     => 'theme-techwear_in_the_alps',
-		target_dir     => 'techwear_in_the_alps',
-	},
 	
 
 };
+
+=pod
+
+bird_of_paradise => { 
+	theme_file     => 'theme-bird_of_paradise',
+	target_dir     => 'bird_of_paradise',
+},
+
+car_camping => { 
+	theme_file     => 'theme-car_camping',
+	target_dir     => 'car_camping',
+},
+
+chocolate_love => { 
+	theme_file     => 'theme-chocolate_love',
+	target_dir     => 'chocolate_love',
+},
+
+digging_in_the_dirt => { 
+	theme_file     => 'theme-digging_in_the_dirt',
+	target_dir => 'digging_in_the_dirt',
+
+},
+
+dm_deep_red => { 
+	theme_file     => 'theme-dm_deep_red',
+	target_dir => 'dm_deep_red',
+},
+
+flamingo_park => { 
+	theme_file     => 'theme-flamingo_park',
+	target_dir     => 'flamingo_park',
+},
+
+holiday_hello_candy_cane => { 
+	theme_file     => 'theme-holiday_hello_candy_cane',
+	target_dir     => 'holiday_hello_candy_cane',
+},
+
+minty_fresh => { 
+	theme_file     => 'theme-minty_fresh',
+	target_dir     => 'minty_fresh',
+},
+	
+nonviolent_violet => { 
+	theme_file     => 'theme-nonviolent_violet',
+	target_dir     => 'nonviolent_violet',
+},
+
+ocean_dream => { 
+	theme_file => 'theme-ocean_dream',
+	target_dir => 'ocean_dream',
+},
+
+plain_white_t => {
+	theme_file => 'theme-plain_white_t',
+	target_dir => 'plain_white_t',
+},
+
+salmon_are_running => { 
+	theme_file     => 'theme-salmon_are_running',
+	target_dir     => 'salmon_are_running',
+},
+
+summer_is_coming => { 
+	theme_file     => 'theme-summer_is_coming',
+	target_dir     => 'summer_is_coming',
+},
+
+
+
+techwear_in_the_alps => { 
+	theme_file     => 'theme-techwear_in_the_alps',
+	target_dir     => 'techwear_in_the_alps',
+},
+
+=cut
+
 
 chdir($working_dir);
 
