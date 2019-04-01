@@ -1,0 +1,54 @@
+$global-font-size: 16px;
+
+$body-font-family: -apple-system, ".SFNSText-Regular", "SanFrancisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+
+$h1-font-size: 17pt;
+$header-font-weight: bold;
+//$subheader-color: $dark-gray;
+$subheader-font-weight: bold;
+
+$h2-font-size: 15pt;
+$h3-font-size: 13pt;
+
+$medium-gray: #bcbdc0;
+$small-font-color: #bcbdc0;
+
+
+// $h4-font-size: 24px;
+// $h5-font-size: 20px;
+// $h6-font-size: 18px;
+
+$global-font-size: 9pt;
+
+$callout-background-fade: 0%;
+
+$primary-color: #a3c9e5;
+//$secondary-color: #a3c9e5;
+$success-color: #ff9100;
+$warning-color: #ebcfcf;
+$alert-color: #ec5840;
+
+
+$body-background: #A7C1CE;
+$container-background: #D4E0E3;
+
+$banner-background: #387b9d;
+$banner-text-color: $white;
+
+$footer-background:  	#D4E0E3;
+$footer-text-color: $black;
+
+$facebook-button-background:     darken(#3B5998, 10%);
+$twitter-button-background:      darken(#1daced, 10%);
+$google-plus_button_background:  darken(#DB4A39, 10%);
+$youtube-button_background:      darken(#c51109, 10%);
+
+
+$button-font-size: (
+  tiny: 8pt,
+  small: 9pt,
+  default: 9pt,
+  large: 10pt,
+);
+
+
