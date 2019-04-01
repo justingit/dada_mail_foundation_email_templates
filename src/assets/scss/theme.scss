@@ -1,18 +1,26 @@
+// http://www.color-hex.com/color-palette/33536
+
+
 $global-font-size: 16px;
 
-//$primary-color:   #2199e8;
+$primary-color:   #23a0ba; 
 //$secondary-color: #777777;
+//$warning-color: #f6be37; 
 
-$body-background: $light-gray;
+$body-background: #23a0ba;
 $container-background: $white;
 
-$banner-background: #e9ebee;
+$banner-background: #e16182;
 $banner-text-color: $black;
 
-$footer-background: $banner-background;
-$footer-text-color: $banner-text-color;
+$footer-background: #096783;
+$footer-text-color: $white;
 
-$facebook-button-background:     #3B5998;
-$twitter-button-background:      #1daced;
-$google-plus_button_background:  #DB4A39;
-$youtube-button_background:      #c51109;
+
+$success-color:                  lighten(#32d0bc, 10%); 
+$button-background:              #f6be37; 
+
+$facebook-button-background:     lighten(#3B5998, 20%);
+$twitter-button-background:      lighten(#1daced, 20%);
+$google-plus_button_background:  lighten(#DB4A39, 20%);
+$youtube-button_background:      lighten(#c51109, 20%);
