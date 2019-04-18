@@ -40,7 +40,7 @@
    </columns>
    <columns large="6">
     
-              <!-- tmpl_if expr="(defined(list_settings.facebook_page_url)) || (defined(list_settings.twitter_url)) || (defined(list_settings.google_plus_url))" -->
+              <!-- tmpl_if expr="(defined(list_settings.facebook_page_url)) || (defined(list_settings.twitter_url)) || (defined(list_settings.instagram_url))" -->
       
      <h4>
       <small>
@@ -66,9 +66,9 @@
       </button>
      <!-- /tmpl_if -->
     
-     <!-- tmpl_if list_settings.google_plus_url -->
-      <button class="small google expand" href="<!-- tmpl_var list_settings.google_plus_url -->">
-       Google+
+     <!-- tmpl_if list_settings.instagram_url -->
+      <button class="small instagram expand" href="<!-- tmpl_var list_settings.instagram_url -->">
+       Instagram
       </button>
      <!-- /tmpl_if -->
      
