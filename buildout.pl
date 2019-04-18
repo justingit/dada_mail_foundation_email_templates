@@ -7,25 +7,21 @@ my $scss_dir    = 'src/assets/scss';
 my $working_dir = './';
 
 
-my $distros = { 
-
-	
-#	default => { 
-#		theme_file => 'theme-bak',
-#		target_dir => 'default',
-#	},
-	
+=pod
 	pacifico => { 
 		theme_file     => 'theme-pacifico',
 		target_dir     => 'pacifico',
 	
 	}, 
+=cut
 
-	
 
-};
+my $distros = { 
 
-=pod
+	default => { 
+		theme_file => 'theme-bak',
+		target_dir => 'default',
+	},
 
 bird_of_paradise => { 
 	theme_file     => 'theme-bird_of_paradise',
@@ -93,15 +89,12 @@ summer_is_coming => {
 	target_dir     => 'summer_is_coming',
 },
 
-
-
 techwear_in_the_alps => { 
 	theme_file     => 'theme-techwear_in_the_alps',
 	target_dir     => 'techwear_in_the_alps',
 },
 
-=cut
-
+}; 
 
 chdir($working_dir);
 
