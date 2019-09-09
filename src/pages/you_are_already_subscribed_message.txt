@@ -8,7 +8,7 @@ Hello,
 
 This message has been sent to you because a request to subscribe: 
 
-<!-- tmpl_var subscriber.email -->
+<!-- tmpl_var profile.email -->
 
 to the list: 
 
