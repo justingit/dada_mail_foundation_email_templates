@@ -32,10 +32,20 @@
     <!-- tmpl_if list_settings.list_phone_number -->
      <p>
       <a href="tel:<!-- tmpl_var list_settings.list_phone_number -->">
-       <!-- tmpl_var list_settings.list_phone_number -->
+       Phone: <!-- tmpl_var list_settings.list_phone_number -->
       </a>
      </p> 
     <!-- /tmpl_if -->
+	
+    <!-- tmpl_if list_settings.whatsapp_number -->
+     <p>
+      <a href="https://wa.me/<!-- tmpl_var list_settings.whatsapp_number -->">
+       WhatsApp: <!-- tmpl_var list_settings.whatsapp_number -->
+      </a>
+     </p> 
+    <!-- /tmpl_if -->
+	
+	
     
    </columns>
    <columns large="6">
