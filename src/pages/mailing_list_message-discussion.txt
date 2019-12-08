@@ -2,8 +2,8 @@
 to_phrase: <!-- tmpl_var list_settings.list_name --> Subscriber
 subject: <!-- tmpl_var list_settings.list_name --> Message
 ---
-From: <!-- tmpl_var sender.email -->
-
+<!-- tmpl_unless list_settings.disable_discussion_sending --><!-- tmpl_if list_settings.bridge_mention_original_sender -->
+From: mailto:<!-- tmpl_var sender.email --><!-- /tmpl_if --><!-- /tmpl_unless -->
 <!-- tmpl_var message_body --> 
 
 -- 

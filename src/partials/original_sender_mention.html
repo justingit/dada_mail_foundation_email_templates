@@ -1,0 +1,15 @@
+<!-- tmpl_unless list_settings.disable_discussion_sending -->
+ <!-- tmpl_if list_settings.bridge_mention_original_sender -->
+  <p>
+   <small>
+    <strong> 
+     From:
+	</strong>
+	<a href="mailto:<!-- tmpl_var sender.email -->">
+     <!-- tmpl_var sender.email -->
+    </a>
+   </small>
+  </p>
+ <!-- /tmpl_if -->
+<!-- /tmpl_unless -->
+   

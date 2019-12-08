@@ -4,12 +4,7 @@
   <columns small="12" large="12"> 
    <spacer size="25"></spacer>
    
-   <small>
-    <strong> 
-     From: <a href="mailto:<!-- tmpl_var sender.email -->"><!-- tmpl_var sender.email --></a>
-    </strong>
-   </small>
-   
+   {{> original_sender_mention}}
    
    {{> message_body}}
 
