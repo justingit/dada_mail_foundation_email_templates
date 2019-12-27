@@ -21,28 +21,94 @@
 
 			<ul>
 				
+				<li><strong>Recipients:</strong>
+					
+					Total: <!-- tmpl_var total_recipients_commified -->, 
+					Delivered: <!-- tmpl_var received_commified --> - <!-- tmpl_var received_percent -->%
+				</strong>
 				
-				<!-- tmpl_if expr="((list_settings.tracker_track_email == 1) && (PII_OPTIONS_allow_logging_emails_in_analytics == 1))" -->
+				<li><strong>Opens:</strong> 
+						
+					Total: <!-- tmpl_var open_commified -->
 				
-					<li><strong>Unique Opens:</strong>    <!-- tmpl_var unique_open --> (<!-- tmpl_var unique_opens_percent -->%)</li>
+					<!-- tmpl_if expr="(
+						(
+							(list_settings.tracker_track_email == 1)
+						 	&& (PII_OPTIONS_allow_logging_emails_in_analytics == 1)
+						) 
+						|| 
+						(list_settings.tracker_track_anonymously == 1)
+					)" -->
+						<!-- tmpl_if unique_open -->
+							, Unique: <!-- tmpl_var unique_open_commified --> - <!-- tmpl_var unique_opens_percent -->%
+						<!-- /tmpl_if -->
+					<!-- /tmpl_if -->
+				</li>
+				<li><strong>Clickthroughs:</strong>  
+					
+					Total: <!-- tmpl_var clickthroughs_commified -->
+					<!-- tmpl_if expr="(
+						(
+							(list_settings.tracker_track_email == 1)
+						 	&& (PII_OPTIONS_allow_logging_emails_in_analytics == 1)
+						) 
+						|| 
+						(list_settings.tracker_track_anonymously == 1)
+					)" -->
+						<!-- tmpl_if unique_clickthroughs -->
+							, Unique: <!-- tmpl_var unique_clickthroughs_commified --> - <!-- tmpl_var unique_clickthroughs_percent -->%
+						<!-- /tmpl_if -->
+					<!-- /tmpl_if -->
+				</li>
+				<li><strong>Unsubscriptions:</strong> 
 				
-				<!-- tmpl_else -->
+					<!-- tmpl_var unsubscribe default="0" -->
+					<!-- tmpl_if expr="((list_settings.tracker_track_email == 1) && (PII_OPTIONS_allow_logging_emails_in_analytics == 1))" -->
+						<!-- tmpl_if unsubscribe -->- 
+							<!-- tmpl_var unique_unsubscribe_percent -->%
+						<!-- /tmpl_if -->
+					<!-- /tmpl_if -->
+				</li>
 				
-					<li><strong>Opens:</strong>    <!-- tmpl_var open --></li>
+				<li><strong>Bounces:</strong> 	
 				
-				<!-- /tmpl_if -->
-
-				<li><strong>Clickthroughs:</strong>   <!-- tmpl_var clickthroughs --></li>
-				<li><strong>Unsubscriptions:</strong> <!-- tmpl_var unsubscribe --> (<!-- tmpl_var unique_unsubscribes_percent -->%)</li>
+					<!-- tmpl_if total_bounce -->
+						Soft: <!-- tmpl_var soft_bounce default="0" -->, 
+						Hard: <!-- tmpl_var hard_bounce  default="0" --> 
+						<!-- addresses that are bounces are tallied, even if we're not collecting email addresses *shrug* -->
+							- <!-- tmpl_var unique_bounces_percent -->%
+					<!-- tmpl_else -->
+						0
+					<!-- /tmpl_if -->
+				</li>
+			
+				<li>
+					<p style="color:red">
+						<strong>Sending Errors:</strong>
+						<!-- tmpl_var errors_sending_to_commified  default="0" -->
+						<!-- tmpl_if errors_sending_to -->
+							- <!-- tmpl_var errors_sending_to_percent -->%
+						<!-- /tmpl_if -->
+					</p>
+				</li>
 				
+				<li>
+					<p style="color:red">
+						<strong>Abuse Reports:</strong>
+						<!-- tmpl_var errors_sending_to  default="0" -->
+						<!-- tmpl_if errors_sending_to_commified -->
+							- <!-- tmpl_var errors_sending_to_percent -->%
+						<!-- /tmpl_if -->
+					</p>
+				</li>
 				
-				<!-- tmpl_if errors_sending_to -->
-					<li>
-						<p style="color:red">
-							<strong>Sending Errors:</strong> <!-- tmpl_var errors_sending_to --> (<!-- tmpl_var errors_sending_to_percent -->%)
-						</p>
-					</li>
-				<!-- /tmpl_if -->
+				<li><strong>Archive Views:</strong> 	
+					<!-- tmpl_var view_archive_commified default="0"-->
+				</li>
+				
+				<li><strong>Forwards:</strong> 	
+					<!-- tmpl_var forward_to_a_friend_commified default="0" -->
+				</li>
 			
 			</ul>
 	
