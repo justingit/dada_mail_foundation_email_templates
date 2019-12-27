@@ -70,37 +70,36 @@
 					<!-- /tmpl_if -->
 				</li>
 				
-				<li><strong>Bounces:</strong> 	
-				
-					<!-- tmpl_if total_bounce -->
-						Soft: <!-- tmpl_var soft_bounce default="0" -->, 
-						Hard: <!-- tmpl_var hard_bounce  default="0" --> 
-						<!-- addresses that are bounces are tallied, even if we're not collecting email addresses *shrug* -->
-							- <!-- tmpl_var unique_bounces_percent -->%
-					<!-- tmpl_else -->
-						0
-					<!-- /tmpl_if -->
-				</li>
+				<!-- tmpl_if total_bounce -->
+					<li><strong>Bounces:</strong> 	
+							Soft: <!-- tmpl_var soft_bounce default="0" -->, 
+							Hard: <!-- tmpl_var hard_bounce  default="0" --> 
+							<!-- addresses that are bounces are tallied, even if we're not collecting email addresses *shrug* -->
+								- <!-- tmpl_var unique_bounces_percent -->%
+					</li>
+				<!-- /tmpl_if -->
 			
-				<li>
-					<p style="color:red">
-						<strong>Sending Errors:</strong>
-						<!-- tmpl_var errors_sending_to_commified  default="0" -->
-						<!-- tmpl_if errors_sending_to -->
-							- <!-- tmpl_var errors_sending_to_percent -->%
-						<!-- /tmpl_if -->
-					</p>
-				</li>
+				<!-- tmpl_if errors_sending_to -->
+					<li>
+						<span style="color:red">
+							<strong>Sending Errors:</strong>
+							<!-- tmpl_var errors_sending_to_commified  default="0" -->
+								- <!-- tmpl_var errors_sending_to_percent -->%
+						</span>
+					</li>
+				<!-- /tmpl_if -->
 				
-				<li>
-					<p style="color:red">
-						<strong>Abuse Reports:</strong>
-						<!-- tmpl_var errors_sending_to  default="0" -->
-						<!-- tmpl_if errors_sending_to_commified -->
-							- <!-- tmpl_var errors_sending_to_percent -->%
-						<!-- /tmpl_if -->
-					</p>
-				</li>
+				<!-- tmpl_if errors_sending_to -->
+					<li>
+						<span style="color:red">
+							<strong>Abuse Reports:</strong>
+							<!-- tmpl_var errors_sending_to  default="0" -->
+							<!-- tmpl_if errors_sending_to_commified -->
+								- <!-- tmpl_var errors_sending_to_percent -->%
+							<!-- /tmpl_if -->
+						</span>
+					</li>
+				<!-- /tmpl_if -->
 				
 				<li><strong>Archive Views:</strong> 	
 					<!-- tmpl_var view_archive_commified default="0"-->
