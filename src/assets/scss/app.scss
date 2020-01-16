@@ -4,6 +4,33 @@
 
 
 
+// the following is commented out, but if you do uncomment it, this will 
+// remove word-wrapping, which doesn't seem to be at all popular
+// When we ship Dada Mail, change the css for td in, 
+//
+// node_modules/foundation-emails/scss/components/_normalize.css
+//
+// If you build your templates from source, that change wouldn't be there, and you would want to 
+// either make it there, or uncomment the below. 
+// 
+// Uncommenting below will add more css noise in the inlined templates. 
+/*
+td {
+
+	word-wrap: break-word;
+		
+	word-break: keep-all;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
+	
+	border-collapse: collapse !important; 
+}
+*/
+
+
+
 // http://foundation.zurb.com/forum/posts/46910-best-way-to-inline-custom-styles
 table.button.facebook table td {
   background: $facebook-button-background !important;
@@ -108,5 +135,3 @@ th.callout-inner {
     color: $black;
   }
 }
-
-
