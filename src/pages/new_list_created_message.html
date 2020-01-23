@@ -1,0 +1,121 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+
+		<h1>
+			Welcome to your new mailing list, <!-- tmpl_var list_settings.list_owner escape="HTML" -->!
+		</h1>
+
+		Here's some basic information you've already set up: 
+
+		<h2>
+			Mailing List Name
+		</h2>
+
+		<p>
+			<!-- tmpl_var list_settings.list_name  escape="HTML" --> 
+		</p>
+
+		<h2>
+			Mailing List Shortname
+		</h2>
+
+		<p>
+			<!-- tmpl_var list_settings.list_name  escape="HTML" --> 
+		</p>
+
+		<h2>
+			Mailing List Description 
+		</h2>
+
+		<p>
+			<!-- tmpl_var list_settings.info  escape="HTML" --> 
+		</p>
+
+		<hr>
+		
+		<p>You can change this information in the List Control Panel under, </p>
+
+		<p>
+			<em>
+				Mailing List: List Information 
+			</em>
+		</p>
+		
+		<h2>
+			Privacy Policy 
+		</h2>
+
+		<p>
+			<!-- tmpl_var list_settings.privacy_policy  escape="HTML" -->
+		</p>
+
+		<p>
+			You can view/edit your privacy policy in the List Control Panel under,
+		</p>
+
+		<p>
+			<em>
+				Mailing List: Privacy Policy
+			</em>
+
+		<p>
+			The Privacy Policy is publicly available to view at: 
+		</p>
+
+		<p>
+			<a href="<!-- tmpl_var S_PROGRAM_URL  escape="HTML" -->/privacy_policy/<!-- tmpl_var list_settings.list  escape="HTML" -->/"> 
+				<!-- tmpl_var S_PROGRAM_URL  escape="HTML" -->/privacy_policy/<!-- tmpl_var list_settings.list  escape="HTML" -->/
+			</a>
+		</p>
+
+		<h2>List Consents</h2>
+
+		<p>
+			List Consents can be viewed in the List Control Panek under, 
+		</p>
+
+		<p>
+			<em>
+				Mailing List: List Consents
+			</em>
+		</p>
+
+		<h2>
+			Ready to start Inviting/Adding Subscribers?
+		</h2>
+
+		<p>
+			Navigate to, 
+		</p>
+		
+		<p>
+			<em>
+				Membership: Invite/Subscribe/Add
+			</em>
+		</p>
+
+		<h2>
+			Ready to Send Out a Mass Mailing? 
+		</h2>
+
+		<p>
+			Navigate to, 
+		</p>
+
+		<p>
+			<em> 
+				Mass Mailing: +New Draft Message
+			</em>
+		</p>
+
+		<p>– <!-- tmpl_var PROGRAM_NAME  escape="HTML" --></p>
+			
+
+		</columns>
+	</row>
+</container>
+		
+{{> footer}}	

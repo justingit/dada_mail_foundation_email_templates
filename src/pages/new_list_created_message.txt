@@ -1,0 +1,58 @@
+---
+subject: Congrats List Owner - your new mailing list has been created! (<!-- tmpl_var list_settings.list_name -->)
+---
+
+Welcome to your new mailing list, <!-- tmpl_var list_settings.list_owner -->!
+
+Here's some basic information you've already set up: 
+
+:: Mailing List Name: 
+
+<!-- tmpl_var list_settings.list_name --> 
+
+:: Mailing List Shortname: 
+
+<!-- tmpl_var list_settings.list_name --> 
+
+:: Mailing List Description 
+
+<!-- tmpl_var list_settings.info --> 
+
+You can change this information in the List Control Panel under, 
+
+	Mailing List: List Information 
+
+:: Privacy Policy 
+
+<!-- tmpl_var list_settings.privacy_policy -->
+
+You can view/edit your privacy policy in the List Control Panel under, 
+
+	Mailing List: Privacy Policy
+
+The Privacy Policy is publicly available to view at: 
+
+<!-- tmpl_var S_PROGRAM_URL -->/privacy_policy/<!-- tmpl_var list_settings.list -->/
+
+:: List Consents
+
+List Consents can be viewed in the List Control Panek under, 
+
+	Mailing List: List Consents
+
+:: Ready to start Inviting/Adding Subscribers? 
+
+Navigate to, 
+
+	Membership: Invite/Subscribe/Add
+
+:: Ready to Send Out a Mass Mailing? 
+
+Navigate to, 
+
+	Mass Mailing: +New Draft Message
+
+– <!-- tmpl_var PROGRAM_NAME -->
+
+
+
