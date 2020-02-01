@@ -7,19 +7,30 @@ my $scss_dir    = 'src/assets/scss';
 my $working_dir = './';
 
 
+
+
+my $distros = { 
+
+	default => { 
+		theme_file => 'theme',
+		target_dir => 'default',
+	},
+
+}; 
+
 =pod
 	pacifico => { 
 		theme_file     => 'theme-pacifico',
 		target_dir     => 'pacifico',
 	
 	}, 
-=cut
+
 
 
 my $distros = { 
 
 	default => { 
-		theme_file => 'theme-bak',
+		theme_file => 'theme',
 		target_dir => 'default',
 	},
 	
@@ -98,7 +109,7 @@ my $distros = {
 
 
 
-	
+=cut
 
 chdir($working_dir);
 
