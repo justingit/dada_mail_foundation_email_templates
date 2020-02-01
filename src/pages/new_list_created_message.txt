@@ -1,7 +1,7 @@
 ---
 from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
 to_phrase: <!-- tmpl_var list_settings.list_name --> Owner
-subject: Time to Celebrate! Your new mailing list has been created! (<!-- tmpl_var list_settings.list_name -->)
+subject: Your new mailing list has been created - <!-- tmpl_var list_settings.list_name -->!
 ---
 
 <!-- tmpl_var list_settings.list_name --> *Lives!*
