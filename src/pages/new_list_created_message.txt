@@ -1,22 +1,36 @@
 ---
-subject: Congrats List Owner - your new mailing list has been created! (<!-- tmpl_var list_settings.list_name -->)
+from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+to_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+subject: Time to Celebrate! Your new mailing list has been created! (<!-- tmpl_var list_settings.list_name -->)
 ---
 
-Welcome to your new mailing list, <!-- tmpl_var list_settings.list_owner -->!
+<!-- tmpl_var list_settings.list_name --> *Lives!*
 
-Here's some basic information you've already set up: 
+Log Into Your Mailing List: 
 
-:: Mailing List Name: 
+<!-- tmpl_var S_PROGRAM_URL -->/<!-- tmpl_var SIGN_IN_FLAVOR_NAME -->/<!-- tmpl_vat list_settings.list -->/
 
-<!-- tmpl_var list_settings.list_name --> 
+Here's some basic information that's already been set up: 
+
+List Owner (that's you):
+
+<!-- tmpl_var list_settings.list_owner_email --> 
 
 :: Mailing List Shortname: 
 
-<!-- tmpl_var list_settings.list_name --> 
+<!-- tmpl_var list_settings.list --> 
+
+<!-- tmpl_if send_new_list_welcome_email_with_list_pass -->:: List Password
+
+<!-- tmpl_var list_password --><!-- /tmpl_if -->
 
 :: Mailing List Description 
 
 <!-- tmpl_var list_settings.info --> 
+
+:: Physical Address
+
+<!-- tmpl_var list_settings.physical_address -->
 
 You can change this information in the List Control Panel under, 
 
