@@ -8,7 +8,7 @@ subject: Time to Celebrate! Your new mailing list has been created! (<!-- tmpl_v
 
 Log Into Your Mailing List: 
 
-<!-- tmpl_var S_PROGRAM_URL -->/<!-- tmpl_var SIGN_IN_FLAVOR_NAME -->/<!-- tmpl_vat list_settings.list -->/
+<!-- tmpl_var S_PROGRAM_URL -->/<!-- tmpl_var SIGN_IN_FLAVOR_NAME -->/<!-- tmpl_var list_settings.list -->/
 
 Here's some basic information that's already been set up: 
 
@@ -50,7 +50,7 @@ The Privacy Policy is publicly available to view at:
 
 :: List Consents
 
-List Consents can be viewed in the List Control Panek under, 
+List Consents can be viewed in the List Control Panel under, 
 
 	Mailing List: List Consents
 
