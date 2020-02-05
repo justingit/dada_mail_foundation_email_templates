@@ -7,30 +7,23 @@ my $scss_dir    = 'src/assets/scss';
 my $working_dir = './';
 
 
-
-
+=pod
 my $distros = { 
-
 	default => { 
-		theme_file => 'theme',
+		theme_file => 'theme-default',
 		target_dir => 'default',
 	},
 
 }; 
+=cut
 
-=pod
-	pacifico => { 
-		theme_file     => 'theme-pacifico',
-		target_dir     => 'pacifico',
-	
-	}, 
 
 
 
 my $distros = { 
 
 	default => { 
-		theme_file => 'theme',
+		theme_file => 'theme-default',
 		target_dir => 'default',
 	},
 	
@@ -109,7 +102,6 @@ my $distros = {
 
 
 
-=cut
 
 chdir($working_dir);
 
@@ -156,20 +148,28 @@ foreach my $d(keys %$distros){
 	unlink($scss_dir . '/' . 'theme.scss');
 }
 
+
+
 f_cp(
 	$scss_dir . '/theme-bak.scss', 
 	$scss_dir . '/theme.scss'
 );
 
 unlink($scss_dir . '/theme-bak.scss') 
-	or warn $!; 
+	or die $!; 
 
 
 sub f_cp {
     require File::Copy;
-    my ( $to, $from ) = @_;
-    my $r = File::Copy::copy( $to, $from );    # or croak "Copy failed: $!";
-    return $r;
+    my ( $source, $destination ) = @_;
+	print 'source: ' . $source . ' destination: ' . $destination . "\n"; 
+	#if($source ne $destination){
+		my $r = File::Copy::copy( $source, $destination ) 
+			or die "Copy failed: $!";
+		print '$r: ' . $r . "\n"; 
+		return $r;
+	#}
+	
 }
 
 
