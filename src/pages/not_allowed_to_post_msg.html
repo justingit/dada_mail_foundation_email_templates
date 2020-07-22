@@ -13,15 +13,40 @@
 			</ul>
 			
 			<p>
-				Your message was received, but was not sent out to this mailing list, most likely 
-				because you are not currently a subscriber.
+				Your message was received, but was not sent out to this mailing list. 
 			</p>
+			
+			<!-- tmpl_if list_settings.group_list --> 
+				<!-- ... -->
+			<!-- tmpl_else -->
+				<p>
+					This mailing list is an announce-only mailing list, 
+					and messages are only accepted from either the List Owner 
+					or specific Authorized Senders. 
+					Subscribers may not post to this mailing list. 
+				</p>
+			<!-- /tmpl_if -->
+			
+			<!-- tmpl_if is_a_subscriber -->
+				<p>
+					Your email address (<!-- tmpl_var subscriber.email -->) is currently subscribed to this mailing list. 
+				</p>
+			<!-- tmpl_else -->
+				<p>
+					Your email address is not currently subscribed to this mailing list. 
+				</p>
+			<!-- /tmpl_if -->
+			
 
 			<p>Please see <a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->">
 				<!-- tmpl_var list_settings.list_name -->'s main screen
 			</a> for more information.</p>
 
-			<p>You may email the List Owner at: <!-- tmpl_var list_settings.list_owner_email --></p>
+			<p>You may email the List Owner at: 
+				<a href="mailto:<!-- tmpl_var list_settings.list_owner_email -->">
+					<!-- tmpl_var list_settings.list_owner_email -->
+				</a>
+			</p>
 
 		</columns>
 	</row>

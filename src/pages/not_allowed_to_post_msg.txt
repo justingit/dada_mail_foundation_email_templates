@@ -9,10 +9,21 @@ List: <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.dis
 From: <!-- tmpl_var subscriber.email -->
 Subject: <!-- tmpl_var original_subject --> 
 
-Your message was received, but was not sent out to this mailing list, most likely 
-because you are not currently a subscriber. 
+Your message was received, but was not sent out to this mailing list. 
 
+<!-- tmpl_if list_settings.group_list --> 
+<!-- tmpl_else -->
+This mailing list is an announce-only mailing list, 
+and messages are only accepted from either the List Owner 
+or specific Authorized Senders. 
+Subscribers may not post to this mailing list. 
+<!-- /tmpl_if -->
 
+<!-- tmpl_if is_a_subscriber -->
+Your email address (<!-- tmpl_var subscriber.email -->) is currently subscribed to this mailing list. 
+<!-- tmpl_else -->
+Your email address is not currently subscribed to this mailing list. 
+<!-- /tmpl_if -->
 Please see: 
 
 	<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->
