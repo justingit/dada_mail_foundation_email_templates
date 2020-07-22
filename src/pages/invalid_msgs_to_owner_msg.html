@@ -9,8 +9,29 @@
 				<li><strong>Subject:</strong> <!-- tmpl_var original_subject --></li>
 			</ul>
 
-			<p>A message was received, but was not sent out to your mailing list, most likely 
-because <!-- tmpl_var subscriber.email --> is not currently a subscriber. </p> 
+			<p>A message was received, but was not sent out to your mailing list.</p>
+			
+			<!-- tmpl_if list_settings.group_list --> 
+				<!-- ... -->
+			<!-- tmpl_else -->
+				<p>
+					This mailing list is an announce-only mailing list, 
+					and messages are only accepted from either the List Owner 
+					or specific Authorized Senders. 
+					Subscribers may not post to this mailing list. 
+				</p>
+			<!-- /tmpl_if -->
+			
+			<!-- tmpl_if is_a_subscriber -->
+				<p>
+					This email address (<!-- tmpl_var subscriber.email -->) is currently subscribed to this mailing list. 
+				</p>
+			<!-- tmpl_else -->
+				<p>
+					This email address is not currently subscribed to this mailing list. 
+				</p>
+			<!-- /tmpl_if -->
+			 
 
 		</columns>
 	</row>
