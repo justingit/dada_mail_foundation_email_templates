@@ -13,106 +13,17 @@
 				<li><strong>Total Mailing Time:</strong> <!-- tmpl_var total_mailing_time --></li>
 				<li><strong>Last Email Sent to:</strong> <!-- tmpl_var last_email_send_to --></li>
 			</ul>
-	
-			<p>
-				Stats on who's been opening, reading, and interacting with your message
-				are being compiled: 
-			</p>
-
-			<ul>
-				
-				<li><strong>Recipients:</strong>
-					
-					Total: <!-- tmpl_var total_recipients_commified -->, 
-					Delivered: <!-- tmpl_var received_commified --> - <!-- tmpl_var received_percent -->%
-				</strong>
-				
-				<li><strong>Opens:</strong> 
 						
-					Total: <!-- tmpl_var open_commified -->
-				
-					<!-- tmpl_if expr="(
-						(
-							(list_settings.tracker_track_email == 1)
-						 	&& (PII_OPTIONS_allow_logging_emails_in_analytics == 1)
-						) 
-						|| 
-						(list_settings.tracker_track_anonymously == 1)
-					)" -->
-						<!-- tmpl_if unique_open -->
-							, Unique: <!-- tmpl_var unique_open_commified --> - <!-- tmpl_var unique_opens_percent -->%
-						<!-- /tmpl_if -->
-					<!-- /tmpl_if -->
-				</li>
-				<li><strong>Clickthroughs:</strong>  
-					
-					Total: <!-- tmpl_var clickthroughs_commified -->
-					<!-- tmpl_if expr="(
-						(
-							(list_settings.tracker_track_email == 1)
-						 	&& (PII_OPTIONS_allow_logging_emails_in_analytics == 1)
-						) 
-						|| 
-						(list_settings.tracker_track_anonymously == 1)
-					)" -->
-						<!-- tmpl_if unique_clickthroughs -->
-							, Unique: <!-- tmpl_var unique_clickthroughs_commified --> - <!-- tmpl_var unique_clickthroughs_percent -->%
-						<!-- /tmpl_if -->
-					<!-- /tmpl_if -->
-				</li>
-				<li><strong>Unsubscriptions:</strong> 
-				
-					<!-- tmpl_var unsubscribe default="0" -->
-					<!-- tmpl_if expr="((list_settings.tracker_track_email == 1) && (PII_OPTIONS_allow_logging_emails_in_analytics == 1))" -->
-						<!-- tmpl_if unsubscribe -->- 
-							<!-- tmpl_var unique_unsubscribe_percent -->%
-						<!-- /tmpl_if -->
-					<!-- /tmpl_if -->
-				</li>
-				
-				<!-- tmpl_if total_bounce -->
-					<li><strong>Bounces:</strong> 	
-							Soft: <!-- tmpl_var soft_bounce default="0" -->, 
-							Hard: <!-- tmpl_var hard_bounce  default="0" --> 
-							<!-- addresses that are bounces are tallied, even if we're not collecting email addresses *shrug* -->
-								- <!-- tmpl_var unique_bounces_percent -->%
-					</li>
-				<!-- /tmpl_if -->
-			
-				<!-- tmpl_if errors_sending_to -->
-					<li>
-						<span style="color:red">
-							<strong>Sending Errors:</strong>
-							<!-- tmpl_var errors_sending_to_commified  default="0" -->
-								- <!-- tmpl_var errors_sending_to_percent -->%
-						</span>
-					</li>
-				<!-- /tmpl_if -->
-				
-				<!-- tmpl_if errors_sending_to -->
-					<li>
-						<span style="color:red">
-							<strong>Abuse Reports:</strong>
-							<!-- tmpl_var errors_sending_to  default="0" -->
-							<!-- tmpl_if errors_sending_to_commified -->
-								- <!-- tmpl_var errors_sending_to_percent -->%
-							<!-- /tmpl_if -->
-						</span>
-					</li>
-				<!-- /tmpl_if -->
-				
-				<li><strong>Archive Views:</strong> 	
-					<!-- tmpl_var view_archive_commified default="0"-->
-				</li>
-				
-				<li><strong>Forwards:</strong> 	
-					<!-- tmpl_var forward_to_a_friend_commified default="0" -->
-				</li>
-			
-			</ul>
-	
-
 			<!-- tmpl_unless mass_test -->
+			
+				<p>
+					Stats on who's been opening, reading, and interacting with your message
+					are being compiled: 
+				</p>
+
+				
+				<!-- tmpl_var mass_mailing_analytics_table -->
+			
 				<p>
 					<container>
 						<row>
