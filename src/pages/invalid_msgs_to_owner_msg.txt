@@ -9,3 +9,17 @@ Subject: <!-- tmpl_var original_subject -->
 
 A message was received, but was not sent out to your mailing list, most likely 
 because <!-- tmpl_var subscriber.email --> is not currently a subscriber. 
+
+<!-- tmpl_if list_settings.group_list --> 
+<!-- tmpl_else -->
+This mailing list is an announce-only mailing list, 
+and messages are only accepted from either the List Owner 
+or specific Authorized Senders. 
+Subscribers may not post to this mailing list. 
+<!-- /tmpl_if -->
+
+<!-- tmpl_if is_a_subscriber -->
+This email address (<!-- tmpl_var subscriber.email -->) is currently subscribed to this mailing list. 
+<!-- tmpl_else -->
+This email address is not currently subscribed to this mailing list. 
+<!-- /tmpl_if -->
