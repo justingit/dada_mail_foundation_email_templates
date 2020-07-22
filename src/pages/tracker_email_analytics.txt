@@ -1,0 +1,10 @@
+---
+to_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+subject: "Mass Mailing Analytics for: <!-- tmpl_var message_subject -->, Sent: <!-- tmpl_var start_time_formatted -->"
+---
+
+View All Message Analytics: 
+
+<!-- tmpl_var S_PROGRAM_URL -->/plugins/tracker?prm=m&mid=<!-- tmpl_var message_id -->
+

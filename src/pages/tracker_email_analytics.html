@@ -1,0 +1,28 @@
+{{> banner}}
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h2>How's your mass mailing performing?</h2>
+			
+			<container>
+				<row>
+					<columns>
+						<center>
+							<button href="<!-- tmpl_var S_PROGRAM_URL -->/plugins/tracker?prm=m&mid=<!-- tmpl_var message_id -->" class="large radius">
+								View All Message Analytics
+							</button>
+						</center>
+					</columns>
+				</row>
+			</container>
+						
+				<!-- tmpl_var mass_mailing_analytics_table -->
+			
+			<h2>
+				Keep up the good work! 
+			</h2>
+			
+		</columns>
+	</row>
+</container>
+{{> footer}}
