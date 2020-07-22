@@ -7,10 +7,16 @@
 				</h1>
 				<p>
 					Thanks, <!-- tmpl_var subscriber.email -->. 
-					Your message with the subject, 
-					<strong>
-						<!-- tmpl_var original_subject escape="HTML" --></strong> 
-					will be delivered to, 
+					Your message with the subject: 
+				</p>
+				<ul>
+					<li>
+						<strong>
+							<!-- tmpl_var original_subject escape="HTML" -->
+						</strong> 
+					</li>
+				</ul>
+					will be delivered to 
 					<strong>
 						<!-- tmpl_var list_settings.list_name -->
 					</strong>
