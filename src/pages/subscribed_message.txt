@@ -36,7 +36,7 @@ Please save this email message for future reference.
 <!-- tmpl_if list_settings.private_list --><!-- tmpl_if list_settings.show_request_removal_links -->
 * Request Removal: 
 <!-- tmpl_var list_unsubscribe_link -->
-&quote;Request Removal&quote; links (like this one) do expire, so look for the freshest
+"Request Removal" links (like this one) do expire, so look for the freshest
 request links in the mailing list messages that you will receive.
 <!-- /tmpl_if --><!-- tmpl_else -->
 * Unsubscribe
