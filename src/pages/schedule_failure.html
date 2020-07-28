@@ -1,0 +1,23 @@
+{{> banner}}
+<container>
+	<row>
+		<columns small="12" large="12">
+			<p>
+				Scheduled Mailing: &quot;
+				<strong> 
+					<!-- tmpl_var mass_mailing_subject escape="HTML" -->
+				</strong>&quot; couldn't be sent.
+			</p>
+
+			<p>Details:</p>
+			
+			<callout class="primary">
+				<!-- tmpl_var html_details -->
+			</callout>
+			
+			<p>- <!-- tmpl_var PROGRAM_NAME  escape="HTML" --></p>
+			
+		</columns>
+	</row>
+</container>
+{{> footer}}

@@ -1,0 +1,13 @@
+---
+to_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+subject: "FAILURE to send out scheduled mailing: <!-- tmpl_var mass_mailing_subject -->"
+---
+
+Scheduled Mailing: "<!-- tmpl_var mass_mailing_subject escape="HTML" -->" couldn't be sent.
+			
+Details:
+
+<!-- tmpl_var details -->
+
+- <!-- tmpl_var PROGRAM_NAME  escape="HTML" -->

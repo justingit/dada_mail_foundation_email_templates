@@ -1,0 +1,13 @@
+---
+to_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+from_phrase: <!-- tmpl_var list_settings.list_name --> Owner
+subject: "Sending out scheduled mailing: <!-- tmpl_var mass_mailing_subject -->"
+---
+
+Scheduled Mailing: "<!-- tmpl_var mass_mailing_subject escape="HTML" -->" is being sent.
+			
+Details:
+
+<!-- tmpl_var details -->
+
+- <!-- tmpl_var PROGRAM_NAME  escape="HTML" -->
