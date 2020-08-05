@@ -7,7 +7,8 @@ my $scss_dir    = 'src/assets/scss';
 my $working_dir = './';
 
 
-=pod
+=pod 
+
 my $distros = { 
 	default => { 
 		theme_file => 'theme-default',
@@ -15,9 +16,8 @@ my $distros = {
 	},
 
 }; 
+
 =cut
-
-
 
 
 my $distros = { 
@@ -99,6 +99,7 @@ my $distros = {
 	},
 
 }; 
+
 
 
 
