@@ -10,11 +10,13 @@ The following address:
     
 has reported abuse pertaining to your mailing list: 
 
-    <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.list -->)
-    
+    <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.list -->)<!-- tmpl_if subscribed -->
+	
 Remove this address: 
 
     <!-- tmpl_var list_unsubscribe_request_approve_link -->
+<!-- tmpl_else -->
+This address is not currently subscribed to your list, but consider blacklisting the address or the entire domain.<!-- /tmpl_if -->
     
 Their report is below: 
 
