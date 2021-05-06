@@ -1,0 +1,14 @@
+---
+to_phrase: <!-- tmpl_var list_settings.list_name --> Subscriber
+from_phrase: <!-- tmpl_var list_settings.list_name -->
+subject: Message received could not be sent to mailing list (original message attached)
+---
+
+Internal Problem
+
+The attached message was sent to your mailing list to be sent out to as a mass mailing. 
+but an internal error in the app itself stopped the message from being sent out. Additional
+tries will not be attempted.
+
+At your discretion, you may look over the message, and manually 
+send out the contents. 
