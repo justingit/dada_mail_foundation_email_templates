@@ -11,4 +11,9 @@ but an internal error in the app itself stopped the message from being sent out.
 tries will not be attempted.
 
 At your discretion, you may look over the message, and manually 
-send out the contents. 
+send out the contents through the list control panel. 
+
+Errors are below:
+
+<!-- tmpl_var errors escape="HTML" -->
+
