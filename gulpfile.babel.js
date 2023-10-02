@@ -11,17 +11,22 @@ import siphon   from 'siphon-media-query';
 import path     from 'path';
 import merge    from 'merge-stream';
 import beep     from 'beepbeep';
-import colors   from 'colors';
+
+// node v10 fix
+import 'globalthis/auto';
 
 const $ = plugins();
 
+var dartSass = require('gulp-sass')(require('sass'));
+
 // Look for the --production flag
-const PRODUCTION = !!(yargs.argv.production);
+const PRODUCTION = !!yargs.argv.production;
+const EMAIL = yargs.argv.to;
 
 // Declar var so that both AWS and Litmus task can use it.
 var CONFIG;
 
-// Build the "dist" folder by running all of the above tasks
+// Build the "dist" folder by running all of the below tasks
 gulp.task('build',
   gulp.series(clean, pages, plaintext, sass, images, inline));
 
@@ -33,9 +38,14 @@ gulp.task('default',
 gulp.task('litmus',
   gulp.series('build', creds, aws, litmus));
 
+
 gulp.task('noninteractive',
   gulp.series('build'));
   
+// Build emails, then send to EMAIL
+gulp.task('mail',
+  gulp.series('build', creds, aws, mail));
+
 // Build emails, then zip
 gulp.task('zip',
   gulp.series('build', zip));
@@ -49,13 +59,12 @@ function clean(done) {
 // Compile layouts, pages, and partials into flat HTML files
 // Then parse using Inky templates
 function pages() {
-  return gulp.src('src/pages/**/*.html')
+  return gulp.src(['src/pages/**/*.html', '!src/pages/archive/**/*.html'])
     .pipe(panini({
       root: 'src/pages',
       layouts: 'src/layouts',
       partials: 'src/partials',
-      helpers: 'src/helpers',
-	  data:    'src/data'
+      helpers: 'src/helpers'
     }))
     .pipe(inky())
     .pipe(gulp.dest('dist'));
@@ -65,7 +74,6 @@ function plaintext() {
   return gulp.src('src/pages/**/*.txt')
     .pipe(gulp.dest('dist'));
 }
-
 
 
 // Reset Panini's cache of layouts and partials
@@ -78,16 +86,20 @@ function resetPages(done) {
 function sass() {
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.if(!PRODUCTION, $.sourcemaps.init()))
-    .pipe($.sass({
-      includePaths: ['node_modules/foundation-emails/scss']
-    }).on('error', $.sass.logError))
+    .pipe(dartSass.sync({
+        includePaths: ['node_modules/foundation-emails/scss']
+    }).on('error', dartSass.logError))
+    .pipe($.if(PRODUCTION, $.uncss(
+      {
+        html: ['dist/**/*.html']
+      })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest('dist/css'));
 }
 
 // Copy and compress images
 function images() {
-  return gulp.src('src/assets/img/**/*')
+  return gulp.src(['src/assets/img/**/*', '!src/assets/img/archive/**/*'])
     .pipe($.imagemin())
     .pipe(gulp.dest('./dist/assets/img'));
 }
@@ -109,11 +121,11 @@ function server(done) {
 
 // Watch for file changes
 function watch() {
-  gulp.watch('src/pages/**/*.txt').on('change', gulp.series(plaintext));
-  gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, inline, browser.reload));
-  gulp.watch(['src/layouts/**/*', 'src/partials/**/*']).on('change', gulp.series(resetPages, pages, inline, browser.reload));
-  gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('change', gulp.series(resetPages, sass, pages, inline, browser.reload));
-  gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
+  gulp.watch('src/pages/**/*.txt').on('change', gulp.series(plaintext));	
+  gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, inline, browser.reload));
+  gulp.watch(['src/layouts/**/*', 'src/partials/**/*']).on('all', gulp.series(resetPages, pages, inline, browser.reload));
+  gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('all', gulp.series(resetPages, sass, pages, inline, browser.reload));
+  gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
 }
 
 // Inlines CSS into HTML, adds media query CSS into the <style> tag of the email, and compresses the HTML
@@ -124,13 +136,15 @@ function inliner(css) {
   var pipe = lazypipe()
     .pipe($.inlineCss, {
       applyStyleTags: false,
-      removeStyleTags: false,
+      removeStyleTags: true,
+      preserveMediaQueries: true,
       removeLinkTags: false
     })
     .pipe($.replace, '<!-- <style> -->', `<style>${mqCss}</style>`)
+    .pipe($.replace, '<link rel="stylesheet" type="text/css" href="css/app.css">', '')
     .pipe($.htmlmin, {
       collapseWhitespace: false,
-	  conservativeCollapse: true, 
+	  conservativeCollapse: true,
       minifyCSS: true
     });
 
@@ -149,7 +163,7 @@ function creds(done) {
   done();
 }
 
-// Post images to AWS S3 so they are accessible to Litmus test
+// Post images to AWS S3 so they are accessible to Litmus and manual test
 function aws() {
   var publisher = !!CONFIG.aws ? $.awspublish.create(CONFIG.aws) : $.awspublish.create();
   var headers = {
@@ -175,6 +189,20 @@ function litmus() {
   return gulp.src('dist/**/*.html')
     .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1"+ awsURL)))
     .pipe($.litmus(CONFIG.litmus))
+    .pipe(gulp.dest('dist'));
+}
+
+// Send email to specified email for testing. If no AWS creds then do not replace img urls.
+function mail() {
+  var awsURL = !!CONFIG && !!CONFIG.aws && !!CONFIG.aws.url ? CONFIG.aws.url : false;
+
+  if (EMAIL) {
+    CONFIG.mail.to = [EMAIL];
+  }
+
+  return gulp.src('dist/**/*.html')
+    .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1"+ awsURL)))
+    .pipe($.mail(CONFIG.mail))
     .pipe(gulp.dest('dist'));
 }
 
@@ -206,9 +234,9 @@ function zip() {
 
     var moveImages = gulp.src(sourcePath)
       .pipe($.htmlSrc({ selector: 'img'}))
-      .pipe($.rename(function (path) {
-        path.dirname = fileName + '/assets/img';
-        return path;
+      .pipe($.rename(function (currentpath) {
+        currentpath.dirname = path.join(fileName, currentpath.dirname.replace('dist', ''));
+        return currentpath;
       }));
 
     return merge(moveHTML, moveImages)
@@ -218,5 +246,3 @@ function zip() {
 
   return merge(moveTasks);
 }
-
-
